@@ -1,0 +1,75 @@
+.thanks-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: radial-gradient(
+      ellipse at 90% 10%,
+      rgba(77, 184, 72, 0.2) 0%,
+      transparent 55%
+    ),
+    linear-gradient(135deg, #005a30 0%, #003d20 60%, #002a16 100%);
+}
+
+.thanks-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 64px 48px;
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 20, 8, 0.35);
+}
+
+.thanks-check {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  background: linear-gradient(135deg, #4db848, #00703c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thanks-card h1 {
+  font-family: "Lora", Georgia, serif;
+  color: #00703c;
+  font-size: 30px;
+  margin: 0 0 14px;
+}
+
+.thanks-card p {
+  color: #44554a;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.thanks-card .btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 13px 34px;
+  border-radius: 999px;
+  background: #005a30;
+  color: #fff;
+  font-weight: 800;
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
+}
+
+.thanks-card .btn:hover {
+  background: #00703c;
+  color: #fff;
+}
+
+.thanks-card .motto {
+  margin-top: 26px;
+  font-size: 13px;
+  color: #7a8a80;
+  font-style: italic;
+  margin-bottom: 0;
+}
