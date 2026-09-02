@@ -5226,6 +5226,25 @@ textarea.form-control {
     object-fit: cover;
 }
 
+/* ===== ROADMAP SECTION BACKGROUND (brand logo image) ===== */
+.roadmap-bg {
+    position: relative;
+    background:
+        linear-gradient(180deg, rgba(0,42,22,0.86) 0%, rgba(0,61,32,0.72) 50%, rgba(6,19,11,0.9) 100%),
+        url("https://res.cloudinary.com/dwsl2ktt2/image/upload/v1784469601/dgonny_qytmb4.png") center / cover no-repeat;
+    color: #fff;
+}
+.roadmap-bg .section-head .kicker,
+.roadmap-bg .section-head .section-intro { color: rgba(255,255,255,0.85); }
+.roadmap-bg .section-head h2,
+.roadmap-bg .tl-body h3 { color: #fff; }
+.roadmap-bg .tl-date { color: #a3e635; }
+.roadmap-bg .tl-body p { color: rgba(255,255,255,0.88); }
+.roadmap-bg .tl-marker { color: #fff; }
+.roadmap-bg .badge-done { background: rgba(163,230,53,0.2); color: #a3e635; border-color: rgba(163,230,53,0.4); }
+.roadmap-bg .badge-active { background: rgba(59,130,246,0.2); color: #93c5fd; border-color: rgba(59,130,246,0.4); }
+.roadmap-bg .roadmap-timeline::before { background: linear-gradient(180deg, rgba(163,230,53,0.7), rgba(163,230,53,0.25)); }
+
 /* ===== ROADMAP TIMELINE ===== */
 .roadmap-timeline {
     max-width: 780px;

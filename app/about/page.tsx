@@ -343,7 +343,7 @@ export default function AboutPage() {
 
       {/* ROADMAP */}
       <div className="section" id="roadmap">
-        <section className="component bg-light-grey reveal">
+        <section className="component roadmap-bg reveal">
           <div className="container-fluid">
             <div className="section-head text-center">
               <span className="kicker">Our Journey</span>
