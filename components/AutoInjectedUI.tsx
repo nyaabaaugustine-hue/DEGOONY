@@ -97,6 +97,16 @@ export default function AutoInjectedUI() {
 
       <div id="socialRail" aria-label="Follow Degoony Evergreen">
         <a
+          href="https://share.google/wTE1KsipxZ8YcIzFv"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-rail-cta"
+          aria-label="Add a review for Degoony Evergreen"
+        >
+          <i className="fas fa-star" aria-hidden="true"></i>
+          <span>Add Review</span>
+        </a>
+        <a
           href="https://facebook.com/degoonyevergreen"
           target="_blank"
           rel="noopener noreferrer"

@@ -793,12 +793,12 @@ export default function Home() {
       </div>
 
       {/* DECLARATION QUOTES */}
-      <div className="section" id="declaration">
-        <section className="component bg-white reveal">
+      <div className="section declaration-photo-bg" id="declaration">
+        <section className="component reveal">
           <div className="container-fluid">
             <div className="section-head text-center">
               <span className="kicker">Our Convictions</span>
-              <h2 className="dark-green">From the Evergreen Declaration</h2>
+              <h2>From the Evergreen Declaration</h2>
             </div>
             <div className="quote-cards reveal-stagger">
               <div className="quote-card">
@@ -822,12 +822,12 @@ export default function Home() {
       </div>
 
       {/* TESTIMONIALS */}
-      <div className="section" id="testimonials">
-        <section className="component bg-white">
+      <div className="section testimonials-photo-bg" id="testimonials">
+        <section className="component">
           <div className="container-fluid">
             <div className="section-head text-center">
               <span className="kicker">Trusted On The Road</span>
-              <h2 className="dark-green">What Our Customers Say</h2>
+              <h2>What Our Customers Say</h2>
               <p className="section-intro">Riders, fleet operators, and graduates who put Evergreen to work every day.</p>
             </div>
             <div className="row reveal-stagger">
