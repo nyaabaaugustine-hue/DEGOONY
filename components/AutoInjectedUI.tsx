@@ -115,6 +115,15 @@ export default function AutoInjectedUI() {
           <i className="fab fa-instagram" aria-hidden="true"></i>
         </a>
         <a
+          href="https://www.linkedin.com/company/degoony-evergreen-logistics-company-ltd"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social-rail-btn"
+          aria-label="LinkedIn"
+        >
+          <i className="fab fa-linkedin-in" aria-hidden="true"></i>
+        </a>
+        <a
           href="https://tiktok.com/@degoonyevergreen"
           target="_blank"
           rel="noopener noreferrer"

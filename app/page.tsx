@@ -177,6 +177,9 @@ export default function Home() {
             priceRange: "$$",
             sameAs: [
               "https://www.facebook.com/evergreenlogisticsghana",
+              "https://www.linkedin.com/company/degoony-evergreen-logistics-company-ltd",
+              "https://instagram.com/degoonyevergreen",
+              "https://youtube.com/@degoonyevergreen",
               "https://wa.me/233550593182",
             ],
             openingHours: "Mo-Sa 08:00-18:00",
