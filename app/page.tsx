@@ -351,7 +351,7 @@ export default function Home() {
                         </div>
                       </div>
                       <p className="parts-note">
-                        TVS parts carry QR-code verification -+ Bajaj supplied via
+                        TVS parts carry QR-code verification &middot; Bajaj supplied via
                         700+ dealers &amp; 3,000 service centres.
                       </p>
                       <a href="/contact" className="text-link has-arrow">Request parts availability</a>
