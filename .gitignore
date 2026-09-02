@@ -1,0 +1,70 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# local logs
+*.log
+build.log
+npm-install.log
+server.log
+
+# superseded/unreferenced original images (kept on disk, not pushed)
+# the site references the optimized .webp versions only
+public/assets/vvvcontact.jpg
+public/assets/young-woman-listens-music-city.jpg
+public/assets/hhhh.jpg
+public/assets/executive_director1.png
+public/assets/executive_director2.png
+public/assets/executive_director3.png
+public/assets/banna (1).png
+public/assets/banna (2).png
+public/assets/banna (3).png
+public/assets/logo.png
+public/assets/CYBER.jpeg
+public/assets/evergreen.jpg
+public/assets/leadership-bg.jpg
+public/assets/mobility-team-bg.jpg
+public/assets/banner-chatgpt.jpg
+public/assets/A1.jpeg
+public/assets/bajaj-pragia.png
+public/assets/banner-herobg.jpg
+public/assets/structured-bg.jpg
+public/assets/offer-bg.jpg
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

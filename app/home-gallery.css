@@ -1,0 +1,482 @@
+/* =====================================================================
+   THE YARD BOARD — homepage fleet gallery redesign
+   Route-scoped: only affects the #gallery section on the homepage
+   (loaded via import in app/page.tsx). The shared about-page gallery
+   keeps its original evergreen.css styling.
+   Concept: an immersive operations board for the Kumasi yard. Photos
+   are mounted like inspected inventory cards — numbered slots, model
+   plates, status chips, mounting clips, and a warranty rubber stamp.
+   ===================================================================== */
+
+.fleet-wall {
+  background-color: #0b2a1b;
+  background-image:
+    radial-gradient(90% 58% at 50% 0%, rgba(240, 200, 90, 0.07), transparent 62%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 128px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.018) 0 1px,
+      transparent 1px 128px
+    ),
+    linear-gradient(180deg, #0c2f1e 0%, #0a2819 55%, #081d12 100%);
+}
+
+.fleet-wall .component {
+  padding: 96px 0 88px;
+}
+
+/* ===== intro ===== */
+.fleet-wall__intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px 48px;
+  margin-bottom: 46px;
+}
+.fleet-wall .kicker {
+  color: #e4b23e;
+  margin-bottom: 14px;
+}
+.fleet-wall__intro h2 {
+  font-family: "Lora", Georgia, serif;
+  font-size: clamp(27px, 3.4vw, 40px);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  color: #f4f8f3;
+  max-width: 620px;
+  margin: 0;
+}
+.fleet-wall__lede {
+  max-width: 400px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(240, 247, 241, 0.72);
+}
+
+/* ===== the board ===== */
+.fleet-wall .gallery-grid {
+  gap: 22px;
+}
+.fleet-wall .gallery-item {
+  border-radius: 18px;
+  background: #0a2416;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 22px 44px -22px rgba(0, 0, 0, 0.6);
+  rotate: 0deg;
+  transition: transform 0.5s cubic-bezier(0.22, 0.68, 0.35, 1),
+    box-shadow 0.4s ease, rotate 0.4s ease;
+}
+
+/* showroom hero: full-width from the top of the board, image contained */
+.fleet-wall .gallery-item.gallery-feature {
+  grid-column: 1 / -1;
+  grid-row: span 3;
+  min-height: 420px;
+  rotate: 0deg;
+  background: #081d12;
+}
+.fleet-wall .gallery-item.gallery-feature .gallery-video-poster,
+.fleet-wall .gallery-item.gallery-feature img {
+  object-fit: contain !important;
+  object-position: center;
+}
+/* letterbox backdrop so contained area reads as intentional plate backplate */
+.fleet-wall .gallery-item.gallery-feature::before {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.025) 0 1px,
+      transparent 1px 12px
+    );
+  inset: 10px;
+  border-radius: 12px;
+}
+.fleet-wall .gallery-item.gallery-feature::after {
+  outline-offset: 12px;
+  outline: 1px dashed rgba(255, 255, 255, 0.16);
+}
+.fleet-wall .gallery-item.gallery-feature:hover img {
+  transform: scale(1.02);
+}
+
+@media (max-width: 767px) {
+  .fleet-wall .gallery-item.gallery-feature {
+    min-height: 300px;
+    aspect-ratio: auto;
+  }
+}
+.fleet-wall .gallery-item:nth-child(even) {
+  rotate: 0.6deg;
+}
+.fleet-wall .gallery-item:nth-child(odd) {
+  rotate: -0.5deg;
+}
+.fleet-wall .gallery-item:hover {
+  rotate: 0deg;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.7),
+    0 30px 60px -24px rgba(0, 0, 0, 0.65);
+  z-index: 2;
+}
+.fleet-wall .gallery-item::before {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.05),
+    transparent 42%
+  );
+}
+/* board texture behind each card */
+.fleet-wall .gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.03) 0 1px,
+      transparent 1px 10px
+    ),
+    rgba(255, 255, 255, 0.02);
+  outline: 1px solid rgba(255, 255, 255, 0.12);
+  outline-offset: 6px;
+}
+.fleet-wall .gallery-item img {
+  object-position: center;
+  transition: transform 1s cubic-bezier(0.22, 0.68, 0.35, 1);
+}
+.fleet-wall .gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+/* mounting clip — the card is "pinned" to the board */
+.fw-clip {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9;
+  width: 54px;
+  height: 16px;
+  border-radius: 2px 2px 8px 8px;
+  background: linear-gradient(180deg, #e9e6de 0%, #b8b4a8 55%, #8f8b80 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+.fw-clip::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 7px;
+  border-radius: 3px;
+  background: #6e6b62;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* slot numeral — Lora, printed on a small plate */
+.fleet-wall .gallery-num {
+  top: 14px;
+  left: 14px;
+  min-width: 46px;
+  height: 46px;
+  padding: 0;
+  border-radius: 12px;
+  font-family: "Lora", Georgia, serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0;
+  color: #f2e6b6;
+  background: rgba(7, 24, 15, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 1;
+  transform: none;
+}
+.fleet-wall .gallery-item:hover .gallery-num {
+  background: rgba(7, 24, 15, 0.55);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* model plate tag */
+.fw-plate {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 6;
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f3e7be;
+  background: rgba(7, 24, 15, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 1;
+  transform: none;
+}
+
+/* card footer — always-on status strip */
+.fleet-wall .gallery-overlay {
+  padding: 18px 20px;
+  gap: 8px;
+  justify-content: flex-end;
+  background: linear-gradient(
+    to top,
+    rgba(6, 20, 13, 0.96) 0%,
+    rgba(6, 20, 13, 0.65) 40%,
+    transparent 72%
+  );
+  opacity: 1;
+}
+
+/* status chip (live dot + label) */
+.fleet-wall .gallery-tag {
+  transform: none;
+  opacity: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: #dfe8e0;
+  background: rgba(8, 26, 17, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: border-color 0.3s ease;
+}
+.fleet-wall .gallery-tag i {
+  font-family: inherit;
+  font-size: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7bd389;
+  box-shadow: 0 0 8px rgba(123, 211, 137, 0.75);
+  flex-shrink: 0;
+}
+.fleet-wall .gallery-item:hover .gallery-tag {
+  opacity: 1;
+}
+
+.fleet-wall .gallery-caption {
+  transform: none;
+  opacity: 1;
+  font-family: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+  font-size: clamp(15px, 1.4vw, 20px);
+  font-weight: 700;
+  color: #fff;
+}
+.fleet-wall .gallery-caption .gallery-arrow {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.fleet-wall .gallery-caption .gallery-arrow i {
+  font-size: 11px;
+}
+.fleet-wall .gallery-item:hover .gallery-caption .gallery-arrow {
+  background: #e4b23e;
+  border-color: #e4b23e;
+  color: #14201b;
+}
+
+/* ===== feature film tile ===== */
+.fleet-wall .gallery-video {
+  background: #050d08;
+}
+.fleet-wall .gallery-video .video-caption {
+  left: 22px;
+  bottom: 18px;
+  z-index: 8;
+  font-size: 15px;
+  color: #fff;
+}
+.fleet-wall .gallery-video .gallery-video-badge {
+  background: #e4b23e;
+  color: #14201b;
+  letter-spacing: 1.4px;
+}
+.fleet-wall .video-play-btn {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.12);
+}
+.fleet-wall .gallery-video:hover .video-play-btn {
+  background: #e4b23e;
+  border-color: #e4b23e;
+  color: #14201b;
+}
+
+/* warranty rubber stamp — the signature */
+.fw-stamp {
+  position: absolute;
+  right: 22px;
+  bottom: 96px;
+  z-index: 8;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 2px solid rgba(228, 178, 62, 0.85);
+  color: rgba(228, 178, 62, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  line-height: 1.55;
+  transform: rotate(-11deg);
+  opacity: 0.92;
+  pointer-events: none;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
+}
+.fw-stamp::before {
+  content: "\2605";
+  font-size: 15px;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.fw-stamp::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(228, 178, 62, 0.45);
+  border-radius: 50%;
+}
+.fleet-wall .gallery-video.playing::after,
+.fleet-wall .gallery-video.playing[class]::after {
+  opacity: 0;
+  visibility: hidden;
+}
+.fleet-wall .gallery-video.playing .fw-stamp {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0s 0.4s;
+}
+
+/* ===== foot ===== */
+.fleet-wall__foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px 24px;
+  margin-top: 44px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+.fleet-wall__count {
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(240, 247, 241, 0.5);
+}
+.fleet-wall__count strong {
+  color: #e4b23e;
+  font-weight: 800;
+}
+.fleet-wall .text-link {
+  color: #e4b23e;
+}
+.fleet-wall .text-link:hover {
+  color: #f0cd6b;
+}
+
+/* ===== responsive ===== */
+@media (max-width: 991px) {
+  .fleet-wall .component {
+    padding: 72px 0;
+  }
+  .fleet-wall__intro {
+    margin-bottom: 34px;
+  }
+  .fleet-wall__lede {
+    max-width: 100%;
+  }
+  .fleet-wall .gallery-grid {
+    gap: 16px;
+  }
+  .fw-stamp {
+    width: 84px;
+    height: 84px;
+    right: 18px;
+    bottom: 84px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fleet-wall .gallery-item:nth-child(even),
+  .fleet-wall .gallery-item:nth-child(odd) {
+    rotate: 0deg;
+  }
+  .fleet-wall .gallery-overlay {
+    padding: 14px 16px;
+  }
+  .fw-plate {
+    top: 12px;
+    right: 12px;
+    font-size: 8.5px;
+    padding: 6px 9px;
+  }
+  .fleet-wall .gallery-num {
+    top: 12px;
+    left: 12px;
+    min-width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+  .fw-clip {
+    width: 46px;
+    height: 14px;
+  }
+  .fw-stamp {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .fleet-wall .component {
+    padding: 56px 0 48px;
+  }
+  .fleet-wall__intro {
+    margin-bottom: 26px;
+  }
+  .fleet-wall .gallery-grid {
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fleet-wall .gallery-item,
+  .fleet-wall .gallery-item img {
+    rotate: 0deg;
+    transition: none;
+  }
+  .fw-stamp {
+    opacity: 1;
+  }
+}
