@@ -2981,6 +2981,12 @@ button.dot {
     text-shadow: 0 2px 14px rgba(0,0,0,0.45);
 }
 
+/* Homepage electric-mobility paragraph: neon green for visibility on dark bg */
+#elcerc .evergreen-photo-bg .cmp-text p {
+    color: #39ff14;
+    font-weight: 600;
+}
+
 .elecer-section .heading h2 { font-size: 34px; }
 .elecer-section .cmp-text p { font-size: 16px; }
 
