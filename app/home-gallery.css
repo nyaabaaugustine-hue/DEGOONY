@@ -153,8 +153,23 @@
   object-position: center;
   transition: transform 1s cubic-bezier(0.22, 0.68, 0.35, 1);
 }
+/* cinematic "moving" wall — each plate drifts on a slow Ken Burns loop */
+.fleet-wall .gallery-item img {
+  animation: fw-drift 22s ease-in-out infinite alternate;
+}
+.fleet-wall .gallery-item:nth-child(2) img { animation-duration: 26s; }
+.fleet-wall .gallery-item:nth-child(3) img { animation-duration: 18s; }
+.fleet-wall .gallery-item:nth-child(4) img { animation-duration: 30s; }
+.fleet-wall .gallery-item:nth-child(5) img { animation-duration: 24s; }
 .fleet-wall .gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.1);
+  animation: none;
+  transition: transform 0.6s cubic-bezier(0.22, 0.68, 0.35, 1);
+}
+@keyframes fw-drift {
+  0%   { transform: scale(1.02) translate(0, 0); }
+  50%  { transform: scale(1.12) translate(-1.2%, -1%); }
+  100% { transform: scale(1.05) translate(1%, 0.8%); }
 }
 
 /* mounting clip — the card is "pinned" to the board */
@@ -475,6 +490,7 @@
   .fleet-wall .gallery-item img {
     rotate: 0deg;
     transition: none;
+    animation: none;
   }
   .fw-stamp {
     opacity: 1;

@@ -7136,6 +7136,47 @@ body.promo-open { overflow: hidden; }
     .lightbox-caption::before, .lightbox-caption::after { display: none; }
 }
 
+/* ===== PREMIUM ZOOM-OUT LIGHTBOX =====
+   The lightbox content starts tiny, pinned over the clicked thumbnail,
+   then morphs outward (zoom-out) into the fullscreen viewer. */
+.gallery-lightbox { will-change: background-color; }
+.gallery-lightbox .lightbox-content {
+    width: min(92vw, 1200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery-lightbox .lightbox-content img {
+    transform: scale(1);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+}
+.gallery-lightbox .lightbox-content img.lightbox-img-ready {
+    transform: scale(1);
+    opacity: 1;
+}
+.gallery-lightbox .lightbox-content img.gallery-loading {
+    opacity: 0;
+}
+.gallery-lightbox .lightbox-content figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.gallery-lightbox .lightbox-content figcaption {
+    margin-top: 20px;
+    color: rgba(255,255,255,0.92);
+    font-family: 'Nunito Sans', 'Segoe UI', Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    text-align: center;
+}
+.gallery-lightbox.gallery-morphing .lightbox-content * {
+    pointer-events: none;
+}
+
 /* ===== GALLERY FEATURE FILM ===== */
 .gallery-item.gallery-video { background: #000; }
 
