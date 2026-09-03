@@ -73,6 +73,18 @@ const PROFILES: Record<string, Profile> = {
     ],
     facts: ["Vehicle QC", "Battery standards", "Vendor management", "Inspections"],
   },
+  yussuff: {
+    name: "Issifu Moro",
+    title: "Portfolio Operations",
+    org: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
+    photo: "https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788460493/YUSSUFF_we0rms.jpg",
+    photoAlt: "Issifu Moro, Portfolio Operations",
+    bio: [
+      "Issifu Moro leads portfolio operations at Evergreen, sharpening how we run, measure, and grow our fleet and route performance across Ghana.",
+      "He brings discipline to daily operations, tracking what works, what doesn't, and what we scale next — always with an eye on the driver and the community.",
+    ],
+    facts: ["Fleet & route performance", "Portfolio management", "Operations discipline", "Growth planning"],
+  },
   augustine: {
     name: "Augustine A. Nyaaba",
     title:

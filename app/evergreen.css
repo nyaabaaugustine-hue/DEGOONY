@@ -3560,7 +3560,7 @@ button.dot {
 /* --- Secondary row: even 3-across --- */
 .leader-secondary {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 24px;
     max-width: 1200px;
     margin: 26px auto 0;
@@ -3649,6 +3649,14 @@ button.dot {
 @media (max-width: 900px) {
     .leader-secondary {
         gap: 16px;
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 720px;
+    }
+    /* 5th card centers across the row instead of leaving an orphan cell */
+    .leader-secondary .leader-mini:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        max-width: calc(33.333% - 11px);
+        justify-self: center;
     }
 }
 

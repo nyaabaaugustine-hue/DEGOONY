@@ -779,6 +779,13 @@ export default function Home() {
                     <p>Quality Control Expert &amp; Vendor Liaison.</p>
                   </div>
                 </LeaderProfileCard>
+                <LeaderProfileCard profile="yussuff" className="leader-card leader-mini">
+                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788460493/YUSSUFF_we0rms.jpg" alt="Issifu Moro" width="160" height="160"  loading="lazy" decoding="async" /></div>
+                  <div className="leader-meta">
+                    <h4>Issifu Moro</h4>
+                    <p>Portfolio Operations.</p>
+                  </div>
+                </LeaderProfileCard>
                 <LeaderProfileCard profile="augustine" className="leader-card leader-mini">
                   <div className="leader-photo leader-photo-sm"><img src="/assets/CYBER.webp" alt="Augustine A. Nyaaba" width="160" height="160"  loading="lazy" decoding="async" /></div>
                   <div className="leader-meta">
