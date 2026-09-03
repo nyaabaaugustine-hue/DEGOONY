@@ -12,8 +12,10 @@ export const viewport: Viewport = {
   themeColor: "#005a30",
 };
 
+const siteUrl = "https://www.evergreenlogistics.com.gh";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.evergreenlogistics.com.gh"),
+  metadataBase: new URL(siteUrl),
   title: {
     default:
       "DEGOONY EVERGREEN LOGISTICS GHANA LTD | Tricycles, Evergreen Electric Fleet & Evergreen Academy",
@@ -22,6 +24,22 @@ export const metadata: Metadata = {
   description:
     "Dealers in Bajaj and TVS Pragia tricycles, genuine spare parts, and the Evergreen electric fleet. Home of the Evergreen Academy — Ghana's structured driver training and fleet-governance institution. Every Ride Creates Opportunity.",
   icons: { icon: "/assets/logo-256.png", apple: "/assets/logo-256.png" },
+  openGraph: {
+    type: "website",
+    locale: "en_GH",
+    url: siteUrl,
+    siteName: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
+    images: [
+      { url: "/assets/banner-herobg.webp", width: 1200, height: 630, alt: "Evergreen electric tricycle fleet" },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
+    description: "Tricycles, electric fleet, genuine parts, and the Evergreen Academy in Ghana.",
+    images: ["/assets/banner-herobg.webp"],
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -30,14 +48,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preload" href="/assets/css/bootstrap.min.css" as="style" />
         <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
         <link rel="preload" href="/assets/css/font-awesome.min.css" as="style" />
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <a className="skip-link" href="#top">
           Skip to main content
         </a>

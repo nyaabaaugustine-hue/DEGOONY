@@ -9,20 +9,26 @@ export default function ContactForm({
 }) {
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const required = Array.from(form.querySelectorAll<HTMLInputElement>("[required]"));
+    const errors: Record<string, string> = {};
     let valid = true;
     required.forEach((f) => {
       if (!f.value.trim()) {
         valid = false;
-        f.style.borderColor = "#e74c3c";
+        errors[f.name] = "This field is required";
+        f.setAttribute("aria-invalid", "true");
+        f.setAttribute("aria-describedby", `error-${f.name}`);
       } else {
-        f.style.borderColor = "#d0d0d0";
+        f.removeAttribute("aria-invalid");
+        f.removeAttribute("aria-describedby");
       }
     });
+    setFieldErrors(errors);
     if (!valid) return;
     setSubmitting(true);
     try {
@@ -86,13 +92,15 @@ export default function ContactForm({
           <div className="col-xs-12 col-md-6">
             <div className="form-group">
               <label htmlFor="firstName">First Name*</label>
-              <input type="text" id="firstName" name="FirstName" className="form-control" required />
+              <input type="text" id="firstName" name="FirstName" className="form-control" required aria-describedby={fieldErrors["FirstName"] ? "error-FirstName" : undefined} />
+              {fieldErrors["FirstName"] && <span id="error-FirstName" className="form-error" role="alert">{fieldErrors["FirstName"]}</span>}
             </div>
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="form-group">
               <label htmlFor="lastName">Last Name*</label>
-              <input type="text" id="lastName" name="LastName" className="form-control" required />
+              <input type="text" id="lastName" name="LastName" className="form-control" required aria-describedby={fieldErrors["LastName"] ? "error-LastName" : undefined} />
+              {fieldErrors["LastName"] && <span id="error-LastName" className="form-error" role="alert">{fieldErrors["LastName"]}</span>}
             </div>
           </div>
         </div>
@@ -100,13 +108,15 @@ export default function ContactForm({
           <div className="col-xs-12 col-md-6">
             <div className="form-group">
               <label htmlFor="email">Email*</label>
-              <input type="email" id="email" name="email" className="form-control" required />
+              <input type="email" id="email" name="email" className="form-control" required aria-describedby={fieldErrors["email"] ? "error-email" : undefined} />
+              {fieldErrors["email"] && <span id="error-email" className="form-error" role="alert">{fieldErrors["email"]}</span>}
             </div>
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="form-group">
               <label htmlFor="phone">Phone*</label>
-              <input type="tel" id="phone" name="PhoneNumber" className="form-control" required />
+              <input type="tel" id="phone" name="PhoneNumber" className="form-control" required aria-describedby={fieldErrors["PhoneNumber"] ? "error-phone" : undefined} />
+              {fieldErrors["PhoneNumber"] && <span id="error-phone" className="form-error" role="alert">{fieldErrors["PhoneNumber"]}</span>}
             </div>
           </div>
         </div>
@@ -114,7 +124,7 @@ export default function ContactForm({
           <div className="col-xs-12">
             <div className="form-group">
               <label htmlFor="interest">I&apos;m interested in*</label>
-              <select id="interest" name="Interest" className="form-control" required defaultValue="">
+              <select id="interest" name="Interest" className="form-control" required defaultValue="" aria-describedby={fieldErrors["Interest"] ? "error-interest" : undefined}>
                 <option value="" disabled>Select an option…</option>
                 <option value="bajaj-tvs">Buying a Bajaj or TVS Pragia</option>
                 <option value="spare-parts">Spare Parts</option>
@@ -122,6 +132,7 @@ export default function ContactForm({
                 <option value="academy-application">Evergreen Academy Application</option>
                 <option value="general">General Enquiry</option>
               </select>
+              {fieldErrors["Interest"] && <span id="error-interest" className="form-error" role="alert">{fieldErrors["Interest"]}</span>}
             </div>
           </div>
         </div>

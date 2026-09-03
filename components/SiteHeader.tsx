@@ -292,7 +292,7 @@ export default function SiteHeader() {
           <ul className="page-nav" ref={navRef}>
             {pageNav.map((p) => (
               <li className={active(p.href) ? "active" : ""} key={p.href}>
-                <Link href={p.href}>{p.label}</Link>
+                <Link href={p.href} aria-current={active(p.href) ? "page" : undefined}>{p.label}</Link>
               </li>
             ))}
           </ul>
@@ -320,11 +320,13 @@ export default function SiteHeader() {
                   <span className="brand-line2">EVERGREEN</span>
                 </span>
               </Link>
-              <span
+              <button
+                type="button"
                 className="close-icon"
                 id="closeMobile"
                 onClick={closeMenu}
-              ></span>
+                aria-label="Close menu"
+              ></button>
               <ul className="nav-utility">
                 <li>
                   <Link href="/contact" onClick={closeMenu}>
@@ -348,7 +350,7 @@ export default function SiteHeader() {
                     className={active(p.href) ? "active" : ""}
                     key={p.href}
                   >
-                    <Link href={p.href} onClick={closeMenu}>
+                    <Link href={p.href} onClick={closeMenu} aria-current={active(p.href) ? "page" : undefined}>
                       {p.label}
                     </Link>
                   </li>
