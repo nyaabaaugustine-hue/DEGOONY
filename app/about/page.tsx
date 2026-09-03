@@ -58,8 +58,8 @@ export default function AboutPage() {
             <div className="row">
               <div className="col-md-7">
                 <span className="kicker">Who We Are</span>
-                <h2 className="dark-green">A woman-led venture, built for West Africa&rsquo;s streets</h2>
-                <p><strong>DEGOONY EVERGREEN LOGISTICS GHANA LTD</strong> is a woman-led clean mobility venture founded by Nadia Ahmed and Jefflean K. Ntow &mdash; registered in the United States, with operations launching across Ghana. We exist to transform urban transportation across West Africa with sustainable, affordable, tech-enabled electric vehicle taxi solutions: tricycles and motorbikes designed for African roads.</p>
+                <h2 className="dark-green">A venture built for West Africa&rsquo;s streets</h2>
+                <p><strong>DEGOONY EVERGREEN LOGISTICS GHANA LTD</strong> is a clean mobility venture founded by Nadia Ahmed and Jefflean K. Ntow &mdash; registered in the United States, with operations launching across Ghana. We exist to transform urban transportation across West Africa with sustainable, affordable, tech-enabled electric vehicle taxi solutions: tricycles and motorbikes designed for African roads.</p>
                 <p><strong>DEGOONY EVERGREEN LOGISTICS GHANA LTD</strong> is our Ghanaian operating company &mdash; running tricycle sales, genuine spare parts, the Evergreen electric fleet, and the Evergreen Academy from our Kumasi base. Together, we serve cities like Accra, Kumasi, and Lagos with cleaner, cost-effective transport.</p>
               </div>
               <div className="col-md-5">

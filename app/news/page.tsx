@@ -85,7 +85,7 @@ export default function NewsPage() {
             <div className="press-body">
               <p className="press-dateline">
                 <strong>ACCRA, GHANA</strong> &mdash; DEGOONY EVERGREEN LOGISTICS
-                GHANA LTD, a woman-led clean mobility startup, today announced the
+                GHANA LTD, a clean mobility startup, today announced the
                 official launch of its operations in Ghana. The company&rsquo;s
                 mission is to revolutionize last-mile transportation across West
                 Africa using affordable electric tricycles, motorbikes, and
@@ -144,7 +144,7 @@ export default function NewsPage() {
                 <div className="press-box">
                   <h4>About DEGOONY EVERGREEN LOGISTICS GHANA LTD</h4>
                   <p>
-                    DEGOONY EVERGREEN LOGISTICS GHANA LTD is a woman-led clean
+                    DEGOONY EVERGREEN LOGISTICS GHANA LTD is a clean
                     mobility startup registered in the United States, launching
                     operations in Ghana. Our mission is to revolutionize last-mile
                     transportation across West Africa, combining environmental
