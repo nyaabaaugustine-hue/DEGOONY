@@ -408,7 +408,7 @@ export default function Home() {
             <Gallery autoPlayMs={6000}>
               <figure className="gallery-item gallery-feature">
                 <span className="fw-clip" aria-hidden="true"></span>
-                <img src="/assets/A1.webp" alt="Evergreen showroom operations" loading="lazy" />
+                <img src="/assets/A1.webp" alt="Evergreen showroom operations" loading="eager" fetchPriority="high" decoding="sync" />
                 <span className="gallery-num">01</span>
                 <span className="fw-plate">Showroom &middot; KSI-01</span>
                 <div className="gallery-overlay">
@@ -498,8 +498,8 @@ export default function Home() {
                 </div>
               </figure>
             <figure className="gallery-item gallery-sq">
-                <span className="fw-clip" aria-hidden="true"></span>
-                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bv1_bbipt4.jpg" alt="Evergreen fleet unit on the road" loading="lazy" />
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-bv1.webp" data-full="/assets/gallery-bv1.webp" alt="Evergreen fleet unit on the road" width="1080" height="1363" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
                 <span className="gallery-num">06</span>
                 <span className="fw-plate">Fleet Unit &middot; KSI-06</span>
                 <div className="gallery-overlay">
@@ -511,8 +511,8 @@ export default function Home() {
                 </div>
               </figure>
               <figure className="gallery-item gallery-sq">
-                <span className="fw-clip" aria-hidden="true"></span>
-                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/vb1_gl5ouo.jpg" alt="Evergreen tricycle fleet line-up" loading="lazy" />
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-vb1.webp" data-full="/assets/gallery-vb1.webp" alt="Evergreen tricycle fleet line-up" width="1280" height="960" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
                 <span className="gallery-num">07</span>
                 <span className="fw-plate">Fleet Line-up &middot; KSI-07</span>
                 <div className="gallery-overlay">
@@ -524,8 +524,8 @@ export default function Home() {
                 </div>
               </figure>
               <figure className="gallery-item gallery-sq">
-                <span className="fw-clip" aria-hidden="true"></span>
-                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bn1_lwwto9.jpg" alt="Evergreen logistics operations" loading="lazy" />
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-bn1.webp" data-full="/assets/gallery-bn1.webp" alt="Evergreen logistics operations" width="1280" height="960" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
                 <span className="gallery-num">08</span>
                 <span className="fw-plate">Operations &middot; KSI-08</span>
                 <div className="gallery-overlay">
