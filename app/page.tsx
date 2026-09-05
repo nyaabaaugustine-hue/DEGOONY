@@ -536,10 +536,49 @@ export default function Home() {
                   </span>
                 </div>
               </figure>
+              <figure className="gallery-item gallery-sq">
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-ts1.webp" data-full="/assets/gallery-ts1.webp" alt="Evergreen fleet unit line-up" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">09</span>
+                <span className="fw-plate">Fleet Unit &middot; KSI-09</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>Ready for Delivery</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-ts2.webp" data-full="/assets/gallery-ts2.webp" alt="Evergreen fleet unit ready for delivery" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">10</span>
+                <span className="fw-plate">Fleet Unit &middot; KSI-10</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>Ready for Delivery</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+<span className="fw-clip" aria-hidden="true"></span>
+<img src="/assets/gallery-ts3.webp" data-full="/assets/gallery-ts3.webp" alt="Evergreen fleet unit on the road" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">11</span>
+                <span className="fw-plate">Fleet Unit &middot; KSI-11</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>On the Road</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
             </Gallery>
             <div className="fleet-wall__foot">
               <span className="fleet-wall__count">
-                8 units in the fleet &middot; <strong>Kumasi Yard</strong>
+                11 units in the fleet &middot; <strong>Kumasi Yard</strong>
               </span>
               <a className="text-link" href="/tricycles">
                 View the full fleet <i className="fas fa-arrow-right"></i>

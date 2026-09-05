@@ -518,6 +518,39 @@ export default function AboutPage() {
                   </span>
                 </div>
               </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="/assets/gallery-ts1.webp" data-full="/assets/gallery-ts1.webp" alt="Evergreen fleet unit line-up" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">09</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="/assets/gallery-ts2.webp" data-full="/assets/gallery-ts2.webp" alt="Evergreen fleet unit ready for delivery" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">10</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="/assets/gallery-ts3.webp" data-full="/assets/gallery-ts3.webp" alt="Evergreen fleet unit on the road" width="1600" height="1200" sizes="(max-width: 576px) 88vw, (max-width: 991px) 50vw, 400px" loading="lazy" decoding="async" />
+                <span className="gallery-num">11</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Fleet Unit
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
             </Gallery>
           </div>
         </section>
