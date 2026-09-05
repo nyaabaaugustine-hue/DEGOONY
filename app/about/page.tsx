@@ -336,7 +336,7 @@ export default function AboutPage() {
                   </div>
                 </LeaderProfileCard>
                 <LeaderProfileCard profile="augustine" className="leader-card leader-mini">
-                  <div className="leader-photo leader-photo-sm"><img src="/assets/CYBER.webp" alt="Augustine A. Nyaaba, Full-Stack Engineer" width="160" height="160"  loading="lazy" decoding="async" /></div>
+                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png" alt="Augustine A. Nyaaba, Full-Stack Engineer" width="160" height="160"  loading="lazy" decoding="async" /></div>
                   <div className="leader-meta">
                     <h4>Augustine A. Nyaaba</h4>
                     <p>Full-Stack Engineer | AI &amp; Blockchain Systems | Scalable Web Infrastructure &amp; Automation | Founder.</p>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 /**
  * Global client component that replicates the original script.js
@@ -9,8 +10,15 @@ import { useEffect } from "react";
  *  - KPI counter animation
  *  - Smooth-scroll for in-page anchors
  *  - Stagger footer reveal
+ *
+ * Because it lives in the root layout it persists across client-side
+ * navigations. We re-initialise the reveal/KPI observers whenever the
+ * pathname changes so freshly rendered pages never stay hidden
+ * (opacity: 0) — which would otherwise render as a blank page.
  */
 export default function ScrollRevealEngine() {
+  const pathname = usePathname();
+
   useEffect(() => {
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)")
       .matches;
@@ -18,50 +26,9 @@ export default function ScrollRevealEngine() {
     let revealObserver: IntersectionObserver | null = null;
     let kpiObserver: IntersectionObserver | null = null;
 
-    // Reveal
-    if (!reduceMotion) {
-      const els = document.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger"
-      );
-      els.forEach((el) => el.classList.remove("visible"));
-      revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) entry.target.classList.add("visible");
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-      );
-      els.forEach((el) => revealObserver!.observe(el));
-    }
+    const revealSelector =
+      ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger";
 
-    // Auto-add reveal classes (mirror addRevealClasses)
-    document
-      .querySelectorAll(
-        ".component.bg-light-grey, .component.bg-white, .component.bg-dark-green, .component.bg-medium-green, .governance-section .component"
-      )
-      .forEach((el) => {
-        if (!el.classList.contains("reveal") && !el.closest(".form-container")) {
-          el.classList.add("reveal");
-        }
-      });
-    document.querySelectorAll(".form-container").forEach((el) => {
-      if (!el.classList.contains("reveal-scale")) el.classList.add("reveal-scale");
-    });
-
-    // Re-observe newly added reveal classes
-    if (revealObserver) {
-      document
-        .querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger")
-        .forEach((el) => {
-          if (!(el as HTMLElement).dataset.revealBound) {
-            (el as HTMLElement).dataset.revealBound = "1";
-            revealObserver!.observe(el);
-          }
-        });
-    }
-
-    // KPI counters
     function animateCounter(el: HTMLElement, target: number, duration = 1800) {
       const startTime = performance.now();
       function tick(now: number) {
@@ -77,8 +44,46 @@ export default function ScrollRevealEngine() {
       requestAnimationFrame(tick);
     }
 
-    const kpiEls = document.querySelectorAll<HTMLElement>(".kpi-number[data-target]");
-    if (kpiEls.length) {
+    function autoAddRevealClasses() {
+      document
+        .querySelectorAll(
+          ".component.bg-light-grey, .component.bg-white, .component.bg-dark-green, .component.bg-medium-green, .governance-section .component"
+        )
+        .forEach((el) => {
+          if (!el.classList.contains("reveal") && !el.closest(".form-container")) {
+            el.classList.add("reveal");
+          }
+        });
+      document.querySelectorAll(".form-container").forEach((el) => {
+        if (!el.classList.contains("reveal-scale")) el.classList.add("reveal-scale");
+      });
+    }
+
+    function initReveal() {
+      revealObserver?.disconnect();
+      revealObserver = null;
+
+      const els = document.querySelectorAll(revealSelector);
+      els.forEach((el) => el.classList.remove("visible"));
+
+      if (reduceMotion) return;
+
+      revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("visible");
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      );
+      els.forEach((el) => revealObserver!.observe(el));
+    }
+
+    function initKpi() {
+      kpiObserver?.disconnect();
+      kpiObserver = null;
+      const kpiEls = document.querySelectorAll<HTMLElement>(".kpi-number[data-target]");
+      if (!kpiEls.length || reduceMotion) return;
       kpiObserver = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -94,25 +99,23 @@ export default function ScrollRevealEngine() {
       kpiEls.forEach((el) => kpiObserver!.observe(el));
     }
 
-    // Scroll reveal triggers
-    function initScrollReveal() {
-      const els = document.querySelectorAll(
-        ".reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-stagger"
-      );
-      const nav = (document.getElementById("contentNav") ||
-        document.querySelector(".main-container")) as HTMLElement | null;
-      els.forEach((el) => {
-        if ((el as HTMLElement).dataset.revealObserved === "1") return;
-        (el as HTMLElement).dataset.revealObserved = "1";
+    // Re-observe any reveal elements added to the DOM later (modals, chips,
+    // lazy content) so nothing is left permanently hidden.
+    const domObserver = new MutationObserver(() => {
+      if (!revealObserver) return;
+      document.querySelectorAll(revealSelector).forEach((el) => {
+        revealObserver!.observe(el);
       });
-    }
-    initScrollReveal();
+    });
+    domObserver.observe(document.body, { childList: true, subtree: true });
+
+    autoAddRevealClasses();
+    initReveal();
+    initKpi();
 
     // Smooth scroll for anchors
     function handleAnchorClick(e: MouseEvent) {
-      const target = (e.target as HTMLElement).closest(
-        'a[href^="#"]'
-      ) as HTMLAnchorElement | null;
+      const target = (e.target as HTMLElement).closest('a[href^="#"]') as HTMLAnchorElement | null;
       if (!target) return;
       const href = target.getAttribute("href");
       if (!href || href === "#" || href.length < 2) return;
@@ -128,9 +131,10 @@ export default function ScrollRevealEngine() {
     return () => {
       revealObserver?.disconnect();
       kpiObserver?.disconnect();
+      domObserver.disconnect();
       document.removeEventListener("click", handleAnchorClick);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }

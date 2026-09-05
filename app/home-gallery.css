@@ -59,9 +59,9 @@
   color: rgba(240, 247, 241, 0.72);
 }
 
-/* ===== the board ===== */
-.fleet-wall .gallery-grid {
-  gap: 22px;
+/* ===== the board (premium moving carousel) ===== */
+.fleet-wall .gallery-carousel {
+  --carousel-gap: 22px;
 }
 .fleet-wall .gallery-item {
   border-radius: 18px;
@@ -72,50 +72,46 @@
     box-shadow 0.4s ease, rotate 0.4s ease;
 }
 
-/* showroom hero: full-width from the top of the board, image contained */
+/* uniform premium slide heights for the moving fleet carousel */
+.fleet-wall .carousel-slide .gallery-item {
+  min-height: clamp(260px, 34vh, 400px);
+  height: 100%;
+} 
+.fleet-wall .carousel-slide {
+  align-self: stretch;
+}
+
+/* feature card: uniform premium carousel slide (no full-width hero span) */
 .fleet-wall .gallery-item.gallery-feature {
-  grid-column: 1 / -1;
-  grid-row: span 3;
-  min-height: 420px;
   rotate: 0deg;
   background: #081d12;
 }
 .fleet-wall .gallery-item.gallery-feature .gallery-video-poster,
 .fleet-wall .gallery-item.gallery-feature img {
-  object-fit: contain !important;
+  object-fit: cover;
   object-position: center;
 }
 /* letterbox backdrop so contained area reads as intentional plate backplate */
 .fleet-wall .gallery-item.gallery-feature::before {
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background:
-    repeating-linear-gradient(
-      45deg,
-      rgba(255, 255, 255, 0.025) 0 1px,
-      transparent 1px 12px
-    );
-  inset: 10px;
-  border-radius: 12px;
+  display: none;
 }
 .fleet-wall .gallery-item.gallery-feature::after {
-  outline-offset: 12px;
-  outline: 1px dashed rgba(255, 255, 255, 0.16);
+  display: none;
 }
 .fleet-wall .gallery-item.gallery-feature:hover img {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 
 @media (max-width: 767px) {
   .fleet-wall .gallery-item.gallery-feature {
-    min-height: 300px;
     aspect-ratio: auto;
   }
 }
 .fleet-wall .gallery-item:nth-child(even) {
-  rotate: 0.6deg;
+  rotate: 0deg;
 }
 .fleet-wall .gallery-item:nth-child(odd) {
-  rotate: -0.5deg;
+  rotate: 0deg;
 }
 .fleet-wall .gallery-item:hover {
   rotate: 0deg;
@@ -153,23 +149,23 @@
   object-position: center;
   transition: transform 1s cubic-bezier(0.22, 0.68, 0.35, 1);
 }
-/* cinematic "moving" wall — each plate drifts on a slow Ken Burns loop */
+/* cinematic "living" cards — a very gentle pan breathes life into each slide */
 .fleet-wall .gallery-item img {
-  animation: fw-drift 22s ease-in-out infinite alternate;
+  animation: fw-drift 32s ease-in-out infinite alternate;
 }
-.fleet-wall .gallery-item:nth-child(2) img { animation-duration: 26s; }
-.fleet-wall .gallery-item:nth-child(3) img { animation-duration: 18s; }
-.fleet-wall .gallery-item:nth-child(4) img { animation-duration: 30s; }
-.fleet-wall .gallery-item:nth-child(5) img { animation-duration: 24s; }
+.fleet-wall .gallery-item:nth-child(2) img { animation-duration: 36s; }
+.fleet-wall .gallery-item:nth-child(3) img { animation-duration: 28s; }
+.fleet-wall .gallery-item:nth-child(4) img { animation-duration: 34s; }
+.fleet-wall .gallery-item:nth-child(5) img { animation-duration: 30s; }
 .fleet-wall .gallery-item:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
   animation: none;
   transition: transform 0.6s cubic-bezier(0.22, 0.68, 0.35, 1);
 }
 @keyframes fw-drift {
   0%   { transform: scale(1.02) translate(0, 0); }
-  50%  { transform: scale(1.12) translate(-1.2%, -1%); }
-  100% { transform: scale(1.05) translate(1%, 0.8%); }
+  50%  { transform: scale(1.04) translate(-0.6%, -0.5%); }
+  100% { transform: scale(1.03) translate(0.6%, 0.5%); }
 }
 
 /* mounting clip — the card is "pinned" to the board */
@@ -432,8 +428,8 @@
   .fleet-wall__lede {
     max-width: 100%;
   }
-  .fleet-wall .gallery-grid {
-    gap: 16px;
+  .fleet-wall .gallery-carousel {
+    --carousel-gap: 16px;
   }
   .fw-stamp {
     width: 84px;
@@ -480,8 +476,8 @@
   .fleet-wall__intro {
     margin-bottom: 26px;
   }
-  .fleet-wall .gallery-grid {
-    gap: 14px;
+  .fleet-wall .gallery-carousel {
+    --carousel-gap: 14px;
   }
 }
 

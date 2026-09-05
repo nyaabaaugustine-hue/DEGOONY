@@ -1,20 +1,46 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const DISMISS_KEY = "evergreen-promo-dismissed";
 
 export default function PromoModal() {
   const [open, setOpen] = useState(false);
   const [success, setSuccess] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const nextTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    const t = setTimeout(() => setOpen(true), 1800);
-    return () => clearTimeout(t);
+    // Close forever: once dismissed, never show the popup again.
+    try {
+      if (localStorage.getItem(DISMISS_KEY)) return;
+    } catch {
+      /* ignore */
+    }
+    // First appearance after 30 seconds.
+    nextTimer.current = setTimeout(() => {
+      setOpen(true);
+      setSuccess(false);
+    }, 30000);
+
+    return () => {
+      if (nextTimer.current) clearTimeout(nextTimer.current);
+    };
   }, []);
+
+  function dismiss() {
+    try {
+      localStorage.setItem(DISMISS_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+    if (nextTimer.current) clearTimeout(nextTimer.current);
+    setOpen(false);
+  }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") dismiss();
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
@@ -47,7 +73,7 @@ export default function PromoModal() {
           className="promo-close"
           id="promoClose"
           aria-label="Close"
-          onClick={() => setOpen(false)}
+          onClick={dismiss}
         >
           &times;
         </button>
@@ -129,7 +155,7 @@ export default function PromoModal() {
             <button
               type="button"
               className="btn primary"
-              onClick={() => setOpen(false)}
+              onClick={dismiss}
             >
               <span>Continue to Site</span>
             </button>

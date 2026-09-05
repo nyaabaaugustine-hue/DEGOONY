@@ -405,7 +405,7 @@ export default function Home() {
                 machines that carry Ghana&rsquo;s trade.
               </p>
             </div>
-            <Gallery>
+            <Gallery autoPlayMs={6000}>
               <figure className="gallery-item gallery-feature">
                 <span className="fw-clip" aria-hidden="true"></span>
                 <img src="/assets/A1.webp" alt="Evergreen showroom operations" loading="lazy" />
@@ -500,7 +500,7 @@ export default function Home() {
             </Gallery>
             <div className="fleet-wall__foot">
               <span className="fleet-wall__count">
-                5 units on the board &middot; <strong>Kumasi Yard</strong>
+                5 units in the fleet &middot; <strong>Kumasi Yard</strong>
               </span>
               <a className="text-link" href="/tricycles">
                 View the full fleet <i className="fas fa-arrow-right"></i>
@@ -787,7 +787,7 @@ export default function Home() {
                   </div>
                 </LeaderProfileCard>
                 <LeaderProfileCard profile="augustine" className="leader-card leader-mini">
-                  <div className="leader-photo leader-photo-sm"><img src="/assets/CYBER.webp" alt="Augustine A. Nyaaba" width="160" height="160"  loading="lazy" decoding="async" /></div>
+                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png" alt="Augustine A. Nyaaba" width="160" height="160"  loading="lazy" decoding="async" /></div>
                   <div className="leader-meta">
                     <h4>Augustine A. Nyaaba</h4>
                     <p>Full-Stack Engineer | AI &amp; Blockchain Systems | Scalable Web Infrastructure &amp; Automation | Founder.</p>

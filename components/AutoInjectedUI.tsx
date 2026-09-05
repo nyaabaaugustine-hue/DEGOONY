@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function AutoInjectedUI() {
-  const [hasLoaded, setHasLoaded] = useState(false);
+  const [loaderDone, setLoaderDone] = useState(false);
   const [backToTop, setBackToTop] = useState(false);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function AutoInjectedUI() {
   }, []);
 
   useEffect(() => {
-    const t = setTimeout(() => setHasLoaded(true), 400);
+    const t = setTimeout(() => setLoaderDone(true), 1500);
     return () => clearTimeout(t);
   }, []);
 
@@ -43,7 +43,27 @@ export default function AutoInjectedUI() {
 
   return (
     <>
-      {hasLoaded && <div className="svg-loader hidden" id="svgLoader" aria-hidden="true"></div>}
+      <div
+        className={`svg-loader${loaderDone ? " hidden" : ""}`}
+        id="svgLoader"
+        role="status"
+        aria-label="Loading"
+      >
+        <div className="svg-frame">
+          <svg viewBox="0 0 344 344" aria-hidden="true">
+            <circle id="out1" cx="172" cy="172" r="160" fill="none" stroke="rgba(77,184,72,0.22)" strokeWidth="3" />
+            <circle id="out2" cx="172" cy="172" r="146" fill="none" stroke="rgba(0,112,60,0.35)" strokeWidth="3" strokeDasharray="12 16" strokeLinecap="round" />
+            <circle id="out3" cx="172" cy="172" r="128" fill="none" strokeWidth="4" strokeDasharray="60 42" strokeLinecap="round" />
+            <circle id="inner1" cx="172" cy="172" r="84" fill="none" stroke="rgba(0,112,60,0.28)" strokeWidth="2.5" />
+            <circle id="inner3" cx="172" cy="172" r="52" fill="none" stroke="rgba(77,184,72,0.5)" strokeWidth="2" strokeDasharray="5 9" strokeLinecap="round" />
+            <circle id="center1" cx="172" cy="172" r="20" />
+          </svg>
+        </div>
+        <p className="loader-brand">
+          DEGOONY <span>EVERGREEN</span>
+        </p>
+        <p className="loader-tag">Logistics &amp; Mobility for Ghana</p>
+      </div>
 
       <a
         className="whatsapp-float"

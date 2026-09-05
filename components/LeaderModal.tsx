@@ -90,11 +90,10 @@ const PROFILES: Record<string, Profile> = {
     title:
       "Full-Stack Engineer | AI & Blockchain Systems | Scalable Web Infrastructure & Automation | Founder",
     org: "Evergreen Logistics LLC",
-    photo: "/assets/CYBER.webp",
+    photo: "https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png",
     photoAlt: "Augustine A. Nyaaba, Full-Stack Engineer",
     bio: [
       "Augustine is a full-stack engineer building across AI and blockchain systems — architecting scalable web infrastructure and automation that keep Evergreen's operations running smoothly across Ghana and the US.",
-      "As a founder, he champions technology reliability and innovation across the group, ensuring drivers, teams, and partners stay connected, protected, and productive.",
     ],
     facts: [
       "Full-stack engineering",

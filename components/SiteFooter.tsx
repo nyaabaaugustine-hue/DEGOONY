@@ -106,9 +106,10 @@ export default function SiteFooter() {
                           <button
                             type="submit"
                             className="btn-subscribe"
-                            aria-label="Subscribe"
+                            aria-label="Subscribe to newsletter"
                           >
-                            &rarr;
+                            <span>Subscribe</span>
+                            <i className="fas fa-arrow-right" aria-hidden="true"></i>
                           </button>
                         </div>
                       </form>
