@@ -88,7 +88,7 @@ const PROFILES: Record<string, Profile> = {
   augustine: {
     name: "Augustine A. Nyaaba",
     title:
-      "Full-Stack Engineer | AI & Blockchain Systems | Scalable Web Infrastructure & Automation | Founder",
+      "Full-Stack Engineer | AI & Blockchain Systems | Scalable Web Infrastructure & Automation",
     org: "Evergreen Logistics LLC",
     photo: "https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png",
     photoAlt: "Augustine A. Nyaaba, Full-Stack Engineer",
