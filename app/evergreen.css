@@ -306,7 +306,7 @@ img {
     text-decoration: none;
 }
 
-/* ===== PAGE NAV â€” segmented tab track (Uiverse-style) under the mega menu ===== */
+/* ===== PAGE NAV — segmented tab track (Uiverse-style) under the mega menu ===== */
 .page-nav-mobile {
     list-style: none;
     display: flex;
@@ -584,7 +584,7 @@ img {
 }
 
 .large-dropdown li a::after {
-    content: "â†’";
+    content: "→";
     opacity: 0;
     transform: translateX(-8px);
     transition: all var(--transition-fast);
@@ -1170,7 +1170,7 @@ img {
 }
 
 .links-list-item.has-arrow::after {
-    content: "â†’";
+    content: "→";
     font-size: 12px;
     transform: translateX(-5px);
     opacity: 0;
@@ -2084,7 +2084,7 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-/* Compact nav tier: fits everything with slack on 1280â€“1439px screens */
+/* Compact nav tier: fits everything with slack on 1280–1439px screens */
 @media (min-width: 1280px) and (max-width: 1439px) {
     .home-page-header .container-fluid {
         padding: 0 22px;
@@ -2133,7 +2133,7 @@ footer {
     }
 }
 
-/* Nav is too dense below 1280px â€” switch to hamburger */
+/* Nav is too dense below 1280px — switch to hamburger */
 @media (max-width: 1279px) {
     .hamburger-menu {
         display: block;
@@ -2470,7 +2470,7 @@ footer {
 }
 
 /* ============================================================
-   DEGOONY EVERGREEN â€” UI COMPONENTS
+   DEGOONY EVERGREEN — UI COMPONENTS
    ============================================================ */
 
 /* ===== ACCESSIBILITY ===== */
@@ -2544,7 +2544,7 @@ footer {
     color: var(--dark-green);
 }
 
-/* ===== HERO â€” UNIFIED LAYOUT ===== */
+/* ===== HERO — UNIFIED LAYOUT ===== */
 .hero-copy {
     position: relative;
     z-index: 2;
@@ -2635,7 +2635,7 @@ footer {
     animation-delay: 0.25s;
 }
 
-/* Carousel dots â€” button reset */
+/* Carousel dots — button reset */
 button.dot {
     appearance: none;
     -webkit-appearance: none;
@@ -4222,7 +4222,7 @@ textarea.form-control {
     .motto-line { text-align: left; margin-top: 8px; }
 }
 
-/* ===== RESPONSIVE â€” NEW COMPONENTS ===== */
+/* ===== RESPONSIVE — NEW COMPONENTS ===== */
 @media (max-width: 1199px) {
     .hero-title { font-size: 42px; }
 }
@@ -6890,7 +6890,7 @@ body.promo-open { overflow: hidden; }
     .social-rail-btn { width: 36px; height: 36px; font-size: 15px; }
 }
 /* =====================================================================
-   FLEET GALLERY â€” editorial bento layout
+   FLEET GALLERY — editorial bento layout
    ===================================================================== */
 .photo-gallery-section .section-intro {
     max-width: 640px;

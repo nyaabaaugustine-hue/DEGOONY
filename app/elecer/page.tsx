@@ -3,12 +3,12 @@
 export const metadata = {
   title: "Evergreen Electric Fleet",
   description:
-    "Evergreen â€” structured electric mobility from DEGOONY EVERGREEN LOGISTICS GHANA LTD. GPS-tracked, geofenced, battery-managed electric tricycles with fleet leasing for disciplined operators.",
+    "Evergreen — structured electric mobility from DEGOONY EVERGREEN LOGISTICS GHANA LTD. GPS-tracked, geofenced, battery-managed electric tricycles with fleet leasing for disciplined operators.",
   alternates: { canonical: "/elecer" },
   openGraph: {
     title: "Evergreen Electric Fleet | DEGOONY EVERGREEN LOGISTICS GHANA LTD",
     description:
-      "Structured electric mobility â€” GPS-tracked, geofenced, and battery-managed. Fleet leasing for disciplined operators.",
+      "Structured electric mobility — GPS-tracked, geofenced, and battery-managed. Fleet leasing for disciplined operators.",
     images: ["/assets/evergreen-opt.webp"],
     url: "https://www.evergreenlogistics.com.gh/elecer",
     siteName: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
@@ -42,7 +42,7 @@ export default function ElecerPage() {
               name: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
             },
             description:
-              "Structured electric mobility â€” GPS-tracked, geofenced, and battery-managed electric tricycles with fleet leasing for disciplined operators.",
+              "Structured electric mobility — GPS-tracked, geofenced, and battery-managed electric tricycles with fleet leasing for disciplined operators.",
             url: "https://www.evergreenlogistics.com.gh/elecer",
             areaServed: { "@type": "Country", name: "Ghana" },
           }),

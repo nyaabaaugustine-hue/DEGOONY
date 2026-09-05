@@ -10,12 +10,12 @@ const FONT_HREF =
 export const metadata = {
   title: "Apply to the Academy",
   description:
-    "Apply to the Evergreen Academy â€” the official application for tricycle (Pragia) drivers, delivery riders, and logistics roles at DEGOONY EVERGREEN LOGISTICS GHANA LTD, Kumasi.",
+    "Apply to the Evergreen Academy — the official application for tricycle (Pragia) drivers, delivery riders, and logistics roles at DEGOONY EVERGREEN LOGISTICS GHANA LTD, Kumasi.",
   alternates: { canonical: "/apply" },
   openGraph: {
     title: "Apply to the Academy",
     description:
-      "Apply to the Evergreen Academy â€” the official application for tricycle (Pragia) drivers, delivery riders, and logistics roles at DEGOONY EVERGREEN LOGISTICS GHANA LTD, Kumasi.",
+      "Apply to the Evergreen Academy — the official application for tricycle (Pragia) drivers, delivery riders, and logistics roles at DEGOONY EVERGREEN LOGISTICS GHANA LTD, Kumasi.",
     images: ["/assets/banner-herobg.webp"],
     url: "https://www.evergreenlogistics.com.gh/apply",
     siteName: "DEGOONY EVERGREEN LOGISTICS GHANA LTD",
@@ -54,7 +54,7 @@ export default function ApplyPage() {
         }}
       />
 
-      {/* HERO â€” original apply.html has no hero; the dark body bg + form spacing carry the design */}
+      {/* HERO — original apply.html has no hero; the dark body bg + form spacing carry the design */}
       <AcademyForm formAction={FORMSPREE} />
     </main>
   );

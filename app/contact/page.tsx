@@ -6,7 +6,7 @@ const FORMSPREE = "https://formspree.io/f/meajwbky";
 export const metadata = {
   title: "Contact",
   description:
-    "Contact DEGOONY EVERGREEN LOGISTICS GHANA LTD â€” get a quote on Bajaj & TVS Pragia tricycles, spare parts, Evergreen fleet leasing, or apply to the Evergreen Academy. Kumasi showroom: Suameâ€“Makro.",
+    "Contact DEGOONY EVERGREEN LOGISTICS GHANA LTD — get a quote on Bajaj & TVS Pragia tricycles, spare parts, Evergreen fleet leasing, or apply to the Evergreen Academy. Kumasi showroom: Suame–Makro.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact | DEGOONY EVERGREEN LOGISTICS GHANA LTD",
@@ -52,7 +52,7 @@ export default function ContactPage() {
                 name: "Do you deliver outside Kumasi?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We deliver tricycles and fleet vehicles across Ghana. Delivery costs depend on your region â€” tell us your location in the enquiry form for an exact figure.",
+                  text: "We deliver tricycles and fleet vehicles across Ghana. Delivery costs depend on your region — tell us your location in the enquiry form for an exact figure.",
                 },
               },
               {
@@ -76,7 +76,7 @@ export default function ContactPage() {
                 name: "Is fleet leasing available for businesses?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes â€” operators can lease Evergreen electric tricycles with GPS tracking, geofencing, and battery-swap management included. Ask for the leasing terms in your message.",
+                  text: "Yes — operators can lease Evergreen electric tricycles with GPS tracking, geofencing, and battery-swap management included. Ask for the leasing terms in your message.",
                 },
               },
             ],
@@ -97,8 +97,8 @@ export default function ContactPage() {
               </span>
               <h1 className="hero-title">Get a quote or apply to the Academy</h1>
               <p className="hero-body">
-                Tell us what you need â€” a tricycle, spare parts, an Evergreen
-                fleet lease, or an Academy application â€” and our Kumasi team
+                Tell us what you need — a tricycle, spare parts, an Evergreen
+                fleet lease, or an Academy application — and our Kumasi team
                 will get back to you within one business day.
               </p>
               <div className="hero-actions">
@@ -132,7 +132,7 @@ export default function ContactPage() {
               <aside className="contact-visual">
                 <img
                   src="/assets/contact-visual.webp"
-                  alt="Young woman in the city â€” the everyday riders DEGOONY EVERGREEN LOGISTICS GHANA LTD serves"
+                  alt="Young woman in the city — the everyday riders DEGOONY EVERGREEN LOGISTICS GHANA LTD serves"
                   loading="lazy"
                   decoding="async"
                 />
@@ -153,7 +153,7 @@ export default function ContactPage() {
               <span className="kicker">Visit Us</span>
               <h2 className="dark-green">Our Kumasi Showroom</h2>
               <p className="section-intro">
-                Walk in, call, or send us a message â€” we are ready to help.
+                Walk in, call, or send us a message — we are ready to help.
               </p>
             </div>
             <div className="row reveal-stagger">
@@ -164,7 +164,7 @@ export default function ContactPage() {
                   </span>
                   <h3>Address</h3>
                   <address>
-                    Near MTN Office, Suameâ€“Makro
+                    Near MTN Office, Suame–Makro
                     <br />
                     Ashanti, Kumasi, Ghana
                   </address>
@@ -206,7 +206,7 @@ export default function ContactPage() {
                   <span className="location-icon">
                     <i className="fas fa-city"></i>
                   </span>
-                  <h3>Accra HQ â€” DEGOONY EVERGREEN LOGISTICS GHANA LTD</h3>
+                  <h3>Accra HQ — DEGOONY EVERGREEN LOGISTICS GHANA LTD</h3>
                   <address>
                     45 Independence Ave, Accra
                     <br />
@@ -250,7 +250,7 @@ export default function ContactPage() {
             <div className="map-shell reveal">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d495.2922897304406!2d-1.6325942205559236!3d6.728512097056034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb972e339097c3%3A0xd162a48bd7c0451c!2sMTN%20Suame!5e0!3m2!1sen!2sgh!4v1787555612157!5m2!1sen!2sgh"
-                title="DEGOONY EVERGREEN LOGISTICS GHANA LTD showroom location â€” near MTN Suame, Kumasi"
+                title="DEGOONY EVERGREEN LOGISTICS GHANA LTD showroom location — near MTN Suame, Kumasi"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
@@ -284,7 +284,7 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>How fast will I get a quote?</summary>
                 <p>
-                  We respond to every enquiry within one business day â€” usually
+                  We respond to every enquiry within one business day — usually
                   much faster. For urgent pricing, call or WhatsApp +233 550 593
                   182 directly.
                 </p>
@@ -292,7 +292,7 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>Can I test ride a tricycle before buying?</summary>
                 <p>
-                  Yes. Visit our Suameâ€“Makro showroom and our team will arrange a
+                  Yes. Visit our Suame–Makro showroom and our team will arrange a
                   test ride and walk you through every Bajaj and TVS Pragia model.
                 </p>
               </details>
@@ -300,7 +300,7 @@ export default function ContactPage() {
                 <summary>Do you deliver outside Kumasi?</summary>
                 <p>
                   We deliver tricycles and fleet vehicles across Ghana. Delivery
-                  costs depend on your region â€” tell us your location in the
+                  costs depend on your region — tell us your location in the
                   enquiry form for an exact figure.
                 </p>
               </details>
@@ -323,7 +323,7 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>Is fleet leasing available for businesses?</summary>
                 <p>
-                  Yes â€” operators can lease Evergreen electric tricycles with GPS
+                  Yes — operators can lease Evergreen electric tricycles with GPS
                   tracking, geofencing, and battery-swap management included. Ask
                   for the leasing terms in your message.
                 </p>
@@ -331,7 +331,7 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>How does pricing work?</summary>
                 <p>
-                  Tricycles, motorbikes, and parts carry clear upfront prices â€”
+                  Tricycles, motorbikes, and parts carry clear upfront prices —
                   ask for today&rsquo;s list. Fleet leasing and Academy training
                   are quoted individually to match your scale.
                 </p>
@@ -339,8 +339,8 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>How long does delivery take?</summary>
                 <p>
-                  Showroom pickups in Suameâ€“Makro are same-day. Regional
-                  deliveries across Ghana typically arrive within 2â€“5 business
+                  Showroom pickups in Suame–Makro are same-day. Regional
+                  deliveries across Ghana typically arrive within 2–5 business
                   days, confirmed with your quote.
                 </p>
               </details>
@@ -355,7 +355,7 @@ export default function ContactPage() {
               <details className="faq-item">
                 <summary>How long do Evergreen batteries last?</summary>
                 <p>
-                  Our lithium packs live at managed swap stations â€” charged under
+                  Our lithium packs live at managed swap stations — charged under
                   logged standards and inspected daily. Any pack showing abnormal
                   readings is pulled from service immediately, so you always swap
                   into a healthy battery.

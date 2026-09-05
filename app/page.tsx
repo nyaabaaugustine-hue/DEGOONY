@@ -116,7 +116,7 @@ const heroSlides = [
   },
   {
     img: "/assets/banner-ghana.webp",
-    alt: "DEGOONY EVERGREEN LOGISTICS GHANA LTD â€” Ghana",
+    alt: "DEGOONY EVERGREEN LOGISTICS GHANA LTD — Ghana",
     logo: "/assets/logo-256.png",
     content: (
       <>
@@ -140,7 +140,7 @@ const heroSlides = [
 ];
 
 const triSlides = [
-  { img: "/assets/red.webp", label: "BAJAJ PRAGIA", title: "The workhorse of Ghanaâ€™s streets." },
+  { img: "/assets/red.webp", label: "BAJAJ PRAGIA", title: "The workhorse of Ghana’s streets." },
   { img: "/assets/bajaj-pragia.webp", label: "BAJAJ PRAGIA CARGO", title: "Built to carry. Priced to move business forward." },
   { img: "/assets/bbbb.webp", label: "TVS KING DELUXE", title: "Comfort engineered for daily routes." },
   { img: "/assets/tvs-green.webp", label: "TVS PRAGIA", title: "Efficiency that pays for itself." },
@@ -245,7 +245,7 @@ export default function Home() {
                 <div className="col-md-4">
                   <div className="product-card">
                     <div className="product-visual visual-bajaj">
-                      <img src="/assets/red.webp" alt="Bajaj Pragia tricycle â€” cargo and passenger"  loading="lazy" decoding="async" />
+                      <img src="/assets/red.webp" alt="Bajaj Pragia tricycle — cargo and passenger"  loading="lazy" decoding="async" />
                       <span className="visual-tag">Bi-Fuel</span>
                     </div>
                     <div className="product-body">
@@ -841,7 +841,7 @@ export default function Home() {
               {[
                 {
                   full: true,
-                  quote: "My Pragia has carried me through two years of daily Kumasiâ€“Ejisu runs. When a part wears out, the showroom has the genuine one on the shelf â€” same day.",
+                  quote: "My Pragia has carried me through two years of daily Kumasi–Ejisu runs. When a part wears out, the showroom has the genuine one on the shelf — same day.",
                   name: "Kwabena Mensah",
                   role: "Commercial rider, Kumasi",
                 },
@@ -853,7 +853,7 @@ export default function Home() {
                 },
                 {
                   full: true,
-                  quote: "The Academy changed how I ride. Defensive riding and road-law training got me certified â€” passengers notice the difference and request me by name.",
+                  quote: "The Academy changed how I ride. Defensive riding and road-law training got me certified — passengers notice the difference and request me by name.",
                   name: "Yaw Osei",
                   role: "Academy graduate, Level 4",
                 },
@@ -907,7 +907,7 @@ export default function Home() {
                 <div className="news-body">
                   <span className="news-tag">Academy</span>
                   <h3 className="news-title">First Cohort Completes Evergreen Academy Certification</h3>
-                  <p className="news-excerpt">Six drivers have completed all six certification levels â€” from Orientation to Executive Development â€” and are now deployed on Kumasi routes with full GPS tracking and governance compliance.</p>
+                  <p className="news-excerpt">Six drivers have completed all six certification levels — from Orientation to Executive Development — and are now deployed on Kumasi routes with full GPS tracking and governance compliance.</p>
                   <a href="/academy" className="text-link has-arrow">Read more</a>
                 </div>
               </div>
@@ -919,7 +919,7 @@ export default function Home() {
                 <div className="news-body">
                   <span className="news-tag">Fleet</span>
                   <h3 className="news-title">Expanding the Bajaj &amp; TVS Pragia Fleet Across Ashanti</h3>
-                  <p className="news-excerpt">New Bajaj Maxima Z and TVS King Deluxe units have arrived at our Kumasi yard â€” inspected, warranted, and ready for passenger and cargo deployment across the Ashanti Region.</p>
+                  <p className="news-excerpt">New Bajaj Maxima Z and TVS King Deluxe units have arrived at our Kumasi yard — inspected, warranted, and ready for passenger and cargo deployment across the Ashanti Region.</p>
                   <a href="/tricycles" className="text-link has-arrow">Read more</a>
                 </div>
               </div>
@@ -931,7 +931,7 @@ export default function Home() {
                 <div className="news-body">
                   <span className="news-tag">Electric Fleet</span>
                   <h3 className="news-title">Evergreen Electric Fleet Reaches GPS Uptime Milestone</h3>
-                  <p className="news-excerpt">Our electric tricycle fleet has achieved 98%+ GPS uptime across all deployed units â€” a testament to the battery-swap network and geofencing discipline that defines structured electric mobility.</p>
+                  <p className="news-excerpt">Our electric tricycle fleet has achieved 98%+ GPS uptime across all deployed units — a testament to the battery-swap network and geofencing discipline that defines structured electric mobility.</p>
                   <a href="/elecer" className="text-link has-arrow">Read more</a>
                 </div>
               </div>
