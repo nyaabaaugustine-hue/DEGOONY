@@ -485,6 +485,39 @@ export default function AboutPage() {
                   </span>
                 </div>
               </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bv1_bbipt4.jpg" alt="Evergreen fleet unit on the road" loading="lazy" />
+                <span className="gallery-num">06</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Unit on the Road
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/vb1_gl5ouo.jpg" alt="Evergreen tricycle fleet line-up" loading="lazy" />
+                <span className="gallery-num">07</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Fleet Line-up
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bn1_lwwto9.jpg" alt="Evergreen logistics operations" loading="lazy" />
+                <span className="gallery-num">08</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i className="fas fa-tag"></i>Fleet</span>
+                  <span className="gallery-caption">
+                    Evergreen Ops
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
             </Gallery>
           </div>
         </section>

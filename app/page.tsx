@@ -497,10 +497,49 @@ export default function Home() {
                   </span>
                 </div>
               </figure>
+            <figure className="gallery-item gallery-sq">
+                <span className="fw-clip" aria-hidden="true"></span>
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bv1_bbipt4.jpg" alt="Evergreen fleet unit on the road" loading="lazy" />
+                <span className="gallery-num">06</span>
+                <span className="fw-plate">Fleet Unit &middot; KSI-06</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>On the Road</span>
+                  <span className="gallery-caption">
+                    Unit on the Road
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <span className="fw-clip" aria-hidden="true"></span>
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/vb1_gl5ouo.jpg" alt="Evergreen tricycle fleet line-up" loading="lazy" />
+                <span className="gallery-num">07</span>
+                <span className="fw-plate">Fleet Line-up &middot; KSI-07</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>Ready for Delivery</span>
+                  <span className="gallery-caption">
+                    Fleet Line-up
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
+              <figure className="gallery-item gallery-sq">
+                <span className="fw-clip" aria-hidden="true"></span>
+                <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788605773/bn1_lwwto9.jpg" alt="Evergreen logistics operations" loading="lazy" />
+                <span className="gallery-num">08</span>
+                <span className="fw-plate">Operations &middot; KSI-08</span>
+                <div className="gallery-overlay">
+                  <span className="gallery-tag"><i></i>Evergreen Ops</span>
+                  <span className="gallery-caption">
+                    Evergreen Ops
+                    <span className="gallery-arrow"><i className="fas fa-arrow-right"></i></span>
+                  </span>
+                </div>
+              </figure>
             </Gallery>
             <div className="fleet-wall__foot">
               <span className="fleet-wall__count">
-                5 units in the fleet &middot; <strong>Kumasi Yard</strong>
+                8 units in the fleet &middot; <strong>Kumasi Yard</strong>
               </span>
               <a className="text-link" href="/tricycles">
                 View the full fleet <i className="fas fa-arrow-right"></i>
