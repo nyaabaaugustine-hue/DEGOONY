@@ -52,7 +52,7 @@ export default function ElecerPage() {
       {/* HERO */}
       <div className="page-hero">
         <div className="container">
-          <span className="kicker">Electric Mobility</span>
+          <span className="hero-eyebrow kicker">Electric Mobility</span>
           <h1>Evergreen: structured electric mobility</h1>
           <p>
             Supervised, tracked, and battery-managed electric tricycles for

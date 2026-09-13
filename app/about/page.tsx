@@ -293,7 +293,7 @@ export default function AboutPage() {
                   className="leader-card leader-feature-card"
                 >
                   <div className="leader-photo leader-photo-lg">
-                    <img src="/assets/JEFFLEAN.webp" alt="Jefflean K. Ntow, Chief Executive Officer of DEGOONY EVERGREEN LOGISTICS GHANA LTD" width="320" height="320"  loading="lazy" decoding="async" />
+                    <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1789336792/jeff_uvt2uk.jpg" srcSet="https://res.cloudinary.com/dwsl2ktt2/image/upload/w_320,q_auto,f_auto/v1789336792/jeff_uvt2uk.jpg 320w, https://res.cloudinary.com/dwsl2ktt2/image/upload/w_640,q_auto,f_auto/v1789336792/jeff_uvt2uk.jpg 640w" sizes="(max-width: 767px) 220px, 296px" alt="Jefflean K. Ntow, Chief Executive Officer of DEGOONY EVERGREEN LOGISTICS GHANA LTD" width="320" height="320"  loading="lazy" decoding="async" />
                   </div>
                   <div className="leader-info">
                     <span className="leader-eyebrow">Co-Founder &amp; Chief Executive Officer</span>
@@ -329,14 +329,14 @@ export default function AboutPage() {
                   </div>
                 </LeaderProfileCard>
                 <LeaderProfileCard profile="yussuff" className="leader-card leader-mini">
-                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788460493/YUSSUFF_we0rms.jpg" alt="Issifu Moro, Portfolio Operations" width="160" height="160"  loading="lazy" decoding="async" /></div>
+                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788460493/YUSSUFF_we0rms.jpg" srcSet="https://res.cloudinary.com/dwsl2ktt2/image/upload/w_160,q_auto,f_auto/v1788460493/YUSSUFF_we0rms.jpg 160w, https://res.cloudinary.com/dwsl2ktt2/image/upload/w_320,q_auto,f_auto/v1788460493/YUSSUFF_we0rms.jpg 320w" sizes="118px" alt="Issifu Moro, Portfolio Operations" width="160" height="160"  loading="lazy" decoding="async" /></div>
                   <div className="leader-meta">
                     <h4>Issifu Moro</h4>
                     <p>Portfolio Operations.</p>
                   </div>
                 </LeaderProfileCard>
                 <LeaderProfileCard profile="augustine" className="leader-card leader-mini">
-                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png" alt="Augustine A. Nyaaba, Full-Stack Engineer" width="160" height="160"  loading="lazy" decoding="async" /></div>
+                  <div className="leader-photo leader-photo-sm"><img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1788594879/professional_profile_image_g7um3q.png" srcSet="https://res.cloudinary.com/dwsl2ktt2/image/upload/w_160,q_auto,f_auto/v1788594879/professional_profile_image_g7um3q.png 160w, https://res.cloudinary.com/dwsl2ktt2/image/upload/w_320,q_auto,f_auto/v1788594879/professional_profile_image_g7um3q.png 320w" sizes="118px" alt="Augustine A. Nyaaba, Full-Stack Engineer" width="160" height="160"  loading="lazy" decoding="async" /></div>
                   <div className="leader-meta">
                     <h4>Augustine A. Nyaaba</h4>
                     <p>Full-Stack Engineer | AI &amp; Blockchain Systems | Scalable Web Infrastructure &amp; Automation</p>

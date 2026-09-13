@@ -41,7 +41,7 @@ export default function Level2BasicQualificationPage() {
 
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">
+          <span className="hero-eyebrow kicker">
             Evergreen Academy &middot; Certification Level 2 of 6
           </span>
           <h1>Basic Qualification</h1>

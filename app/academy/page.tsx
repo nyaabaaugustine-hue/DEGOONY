@@ -77,7 +77,7 @@ export default function AcademyPage() {
       {/* ===== PAGE HERO ===== */}
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">Training Institution</span>
+          <span className="hero-eyebrow kicker">Training Institution</span>
           <h1>Evergreen Academy</h1>
           <blockquote className="motto-quote">
             &ldquo;Learn. Practice. Demonstrate. Certify.&rdquo;

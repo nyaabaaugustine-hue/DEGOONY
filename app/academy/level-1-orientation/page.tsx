@@ -41,7 +41,7 @@ export default function Level1OrientationPage() {
 
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">
+          <span className="hero-eyebrow kicker">
             Evergreen Academy &middot; Certification Level 1 of 6
           </span>
           <h1>Orientation</h1>

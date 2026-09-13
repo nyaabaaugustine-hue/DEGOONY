@@ -1,6 +1,162 @@
 @import "../public/assets/fonts/fonts.css";
 @import "./evergreen.css";
 
+/* ==========================================================================
+   Site refinements layered on top of evergreen.css.
+   This file is imported after evergreen.css, so rules here win at equal
+   specificity. Everything below is additive - no evergreen rule was removed.
+   ========================================================================== */
+
+/* ---------- Footer newsletter -------------------------------------------- */
+/* Keep the "Email" label, the email field, and the "Subscribe" button from
+   crowding each other. */
+.input-section label {
+  margin-bottom: 12px;
+}
+
+.input-group {
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.input-group .form-control {
+  min-width: 0;
+}
+
+/* ---------- Fluid display type ------------------------------------------- */
+/* evergreen.css pins ~226 font sizes in px, so headings step at breakpoints.
+   These tokens let the display headings scale smoothly instead. */
+:root {
+  --fs-display: clamp(1.875rem, 1.15rem + 3.1vw, 3.125rem); /* 30px -> 50px */
+  --fs-hero: clamp(1.75rem, 1.2rem + 2.4vw, 2.625rem);      /* 28px -> 42px */
+  --fs-section: clamp(1.5rem, 1.15rem + 1.5vw, 2.125rem);   /* 24px -> 34px */
+  --fs-lead: clamp(1rem, 0.95rem + 0.25vw, 1.0625rem);      /* 16px -> 17px */
+}
+
+.hero-title {
+  font-size: var(--fs-display);
+}
+
+.page-hero h1,
+.page-hero .hero-title {
+  font-size: var(--fs-hero);
+}
+
+.section-head h1,
+.section-head h2 {
+  font-size: var(--fs-section);
+}
+
+.hero-body,
+.section-intro {
+  font-size: var(--fs-lead);
+}
+
+/* ---------- Header badge text ------------------------------------------- */
+/* `.page-hero .kicker` paints the kicker #a9e8ab, which measures 4.18:1 on the
+   translucent eyebrow badge - under AA for 12px text. White measures 5.93:1. */
+.hero-eyebrow.kicker,
+.page-hero .hero-eyebrow {
+  color: #fff;
+}
+
+/* ---------- Image frames ------------------------------------------------- */
+/* Leader portraits were a stark white box until the photo arrived. */
+.leader-photo {
+  background-color: #eef3ef;
+  background-image: linear-gradient(100deg, #eef3ef 30%, #f8fbf9 50%, #eef3ef 70%);
+  background-size: 200% 100%;
+  animation: frame-shimmer 1.8s ease-in-out infinite;
+}
+
+@keyframes frame-shimmer {
+  from { background-position: 150% 0; }
+  to { background-position: -50% 0; }
+}
+
+/* ---------- Floating controls -------------------------------------------- */
+/* One size, one offset, plus safe-area insets so nothing sits under a phone's
+   home indicator. */
+.whatsapp-float,
+.theme-float,
+#backToTop {
+  width: 52px;
+  height: 52px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+}
+
+#socialRail,
+#backToTop {
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+}
+
+#backToTop {
+  right: 20px;
+}
+
+/* ---------- Mobile contact bar ------------------------------------------- */
+.mobile-cta-bar,
+.mobile-cta-spacer {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* The rail duplicates the footer's social links and is not a conversion
+     path; hiding it stops six more buttons competing for a phone's bottom
+     edge. */
+  #socialRail {
+    display: none;
+  }
+
+  .mobile-cta-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 950;
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid #e3ebe5;
+    box-shadow: 0 -6px 20px rgba(15, 40, 28, 0.08);
+  }
+
+  .mobile-cta-bar .btn {
+    flex: 1 1 0;
+    min-height: 46px;
+    justify-content: center;
+    padding: 0 12px;
+    white-space: nowrap;
+    font-size: 14px;
+  }
+
+  .mobile-cta-spacer {
+    display: block;
+    height: 74px;
+  }
+}
+
+/* ---------- Parts shop result count -------------------------------------- */
+.shop-count {
+  text-align: center;
+  font-size: 14px;
+  color: #4b5f52;
+  margin: -8px 0 20px;
+}
+
+.shop-count strong {
+  color: var(--dark-green);
+}
+
+/* ---------- Reduced motion ---------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .leader-photo {
+    animation: none;
+  }
+}
+
 body {
   background: #fff;
   color: #333;

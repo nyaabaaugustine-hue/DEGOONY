@@ -2567,7 +2567,7 @@ footer {
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     padding: 7px 16px;
-    border-radius: 30px;
+    border-radius: 7%;
     margin-bottom: 20px;
 }
 

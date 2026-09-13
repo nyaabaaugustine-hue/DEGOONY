@@ -19,12 +19,32 @@ type Profile = {
   photoAlt: string;
 };
 
+/**
+ * Cloudinary portraits are stored at full resolution. Ask Cloudinary for the
+ * widths we actually render so phones never download a 2000px original.
+ * Returns undefined for local /assets images, which React omits.
+ */
+function cloudinarySrcSet(url: string) {
+  if (!url.includes("res.cloudinary.com") || !url.includes("/image/upload/")) {
+    return undefined;
+  }
+  return [320, 640]
+    .map(
+      (w) =>
+        `${url.replace(
+          "/image/upload/",
+          `/image/upload/w_${w},q_auto,f_auto/`
+        )} ${w}w`
+    )
+    .join(", ");
+}
+
 const PROFILES: Record<string, Profile> = {
   jefflean: {
     name: "Jefflean K. Ntow",
     title: "Co-Founder & Chief Executive Officer",
     org: "Evergreen Logistics LLC",
-    photo: "/assets/JEFFLEAN.webp",
+    photo: "https://res.cloudinary.com/dwsl2ktt2/image/upload/v1789336792/jeff_uvt2uk.jpg",
     photoAlt: "Jefflean K. Ntow, Chief Executive Officer",
     bio: [
       "Jefflean co-founded Evergreen to prove that disciplined fleet operations and genuine care for people can move an entire economy forward. As Chief Executive Officer he leads financial strategy across the group — from the Ghana operating companies to the US parent.",
@@ -206,6 +226,8 @@ export function LeaderModalProvider({
             <div className="leader-modal-photo">
               <img
                 src={profile.photo}
+                srcSet={cloudinarySrcSet(profile.photo)}
+                sizes="(max-width: 767px) 150px, 220px"
                 alt={profile.photoAlt}
                 width="240"
                 height="240"

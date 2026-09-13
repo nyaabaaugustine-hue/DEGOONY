@@ -45,17 +45,30 @@ export default function ScrollRevealEngine() {
     }
 
     function autoAddRevealClasses() {
+      // Only enhance sections that are still below the fold. Adding .reveal to
+      // an element that is already on screen would hide visible content for a
+      // frame (flash) and asks the browser to re-render it for nothing.
+      const fold = window.innerHeight * 0.9;
       document
         .querySelectorAll(
           ".component.bg-light-grey, .component.bg-white, .component.bg-dark-green, .component.bg-medium-green, .governance-section .component"
         )
         .forEach((el) => {
-          if (!el.classList.contains("reveal") && !el.closest(".form-container")) {
+          if (
+            !el.classList.contains("reveal") &&
+            !el.closest(".form-container") &&
+            el.getBoundingClientRect().top > fold
+          ) {
             el.classList.add("reveal");
           }
         });
       document.querySelectorAll(".form-container").forEach((el) => {
-        if (!el.classList.contains("reveal-scale")) el.classList.add("reveal-scale");
+        if (
+          !el.classList.contains("reveal-scale") &&
+          el.getBoundingClientRect().top > fold
+        ) {
+          el.classList.add("reveal-scale");
+        }
       });
     }
 
@@ -64,9 +77,17 @@ export default function ScrollRevealEngine() {
       revealObserver = null;
 
       const els = document.querySelectorAll(revealSelector);
-      els.forEach((el) => el.classList.remove("visible"));
 
-      if (reduceMotion) return;
+      // Never REMOVE "visible" here. This engine renders in the root layout, so
+      // it hydrates before the streamed page segment does. Stripping a class
+      // that the page markup already contains mutates a DOM node React has not
+      // hydrated yet, and React then reports a hydration mismatch on that
+      // element's className. Only ever add "visible"; elements are re-observed
+      // on navigation and freshly mounted ones start without it.
+      if (reduceMotion) {
+        els.forEach((el) => el.classList.add("visible"));
+        return;
+      }
 
       revealObserver = new IntersectionObserver(
         (entries) => {

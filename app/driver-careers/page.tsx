@@ -51,7 +51,7 @@ export default function DriverCareersPage() {
 
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">Driver Careers</span>
+          <span className="hero-eyebrow kicker">Driver Careers</span>
           <h1>Drive with Evergreen</h1>
           <blockquote className="motto-quote">
             &ldquo;Clean Mobility. Local Empowerment. Global Impact.&rdquo;

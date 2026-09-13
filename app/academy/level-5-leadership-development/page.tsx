@@ -41,7 +41,7 @@ export default function Level5LeadershipDevelopmentPage() {
 
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">
+          <span className="hero-eyebrow kicker">
             Evergreen Academy &middot; Certification Level 5 of 6
           </span>
           <h1>Leadership Development</h1>

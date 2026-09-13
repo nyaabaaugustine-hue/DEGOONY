@@ -44,7 +44,7 @@ export default function SparePartsPage() {
 
       <div className="page-hero">
         <div className="container">
-          <span className="kicker">Parts</span>
+          <span className="hero-eyebrow kicker">Parts</span>
           <h1>Genuine Bajaj &amp; TVS Parts</h1>
           <p>
             Every component we stock is sourced as an original equipment
@@ -148,6 +148,27 @@ export default function SparePartsPage() {
           </div>
         </section>
       </div>
+      <div className="mobile-cta-bar">
+        <a
+          className="btn primary"
+          href="https://wa.me/233550593182?text=Hello%20Degoony%20Evergreen!%20I%20need%20a%20spare%20part."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i className="fab fa-whatsapp"></i> WhatsApp
+          </span>
+        </a>
+        <a className="btn secondary" href="tel:+233550593182">
+          <span>
+            <i className="fas fa-phone-alt"></i> Call
+          </span>
+        </a>
+        <Link className="btn secondary" href="/contact">
+          <span>Get a Quote</span>
+        </Link>
+      </div>
+      <div className="mobile-cta-spacer" aria-hidden="true"></div>
     </main>
   );
 }

@@ -229,6 +229,27 @@ export default function Tricycles() {
           </div>
         </section>
       </div>
+      <div className="mobile-cta-bar">
+        <a
+          className="btn primary"
+          href="https://wa.me/233550593182?text=Hello%20Degoony%20Evergreen!%20I%20have%20an%20enquiry%20about%20a%20tricycle."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span>
+            <i className="fab fa-whatsapp"></i> WhatsApp
+          </span>
+        </a>
+        <a className="btn secondary" href="tel:+233550593182">
+          <span>
+            <i className="fas fa-phone-alt"></i> Call
+          </span>
+        </a>
+        <a className="btn secondary" href="/contact">
+          <span>Get a Quote</span>
+        </a>
+      </div>
+      <div className="mobile-cta-spacer" aria-hidden="true"></div>
     </main>
   );
 }

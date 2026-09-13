@@ -108,6 +108,10 @@ export default function SparePartsShop() {
         />
       </div>
 
+      <p className="shop-count" role="status">
+        Showing <strong>{visibleCount}</strong> of {PRODUCTS.length} parts
+      </p>
+
       <div className="shop-grid reveal-stagger">
         {visible.map(({ product: p, show }) => (
           <article

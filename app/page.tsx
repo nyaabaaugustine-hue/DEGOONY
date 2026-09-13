@@ -232,7 +232,7 @@ export default function Home() {
             <div className="section-head text-center">
               <span className="kicker">Products</span>
               <h2 className="dark-green">
-                Bajaj &amp; TVS Pragia &mdash; Sales, Leasing &amp; Genuine Parts.
+                TVS, BAJAJ &amp; ELECER (Electric Tricycle (Pragia)
               </h2>
               <p className="section-intro">
                 We sell, service, and supply parts for the tricycles Ghana&apos;s
@@ -820,7 +820,7 @@ export default function Home() {
                   className="leader-card leader-feature-card"
                 >
                   <div className="leader-photo leader-photo-lg">
-                    <img src="/assets/JEFFLEAN.webp" alt="Jefflean K. Ntow, Chief Executive Officer" width="320" height="320"  loading="lazy" decoding="async" />
+                    <img src="https://res.cloudinary.com/dwsl2ktt2/image/upload/v1789336792/jeff_uvt2uk.jpg" srcSet="https://res.cloudinary.com/dwsl2ktt2/image/upload/w_320,q_auto,f_auto/v1789336792/jeff_uvt2uk.jpg 320w, https://res.cloudinary.com/dwsl2ktt2/image/upload/w_640,q_auto,f_auto/v1789336792/jeff_uvt2uk.jpg 640w" sizes="(max-width: 767px) 220px, 296px" alt="Jefflean K. Ntow, Chief Executive Officer" width="320" height="320"  loading="lazy" decoding="async" />
                   </div>
                   <div className="leader-info">
                     <span className="leader-eyebrow">Co-Founder &amp; Chief Executive Officer</span>

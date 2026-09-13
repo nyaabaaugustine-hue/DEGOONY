@@ -41,7 +41,7 @@ export default function Level4AdvancedCertificationPage() {
 
       <div className="page-hero academy-hero-bg">
         <div className="container">
-          <span className="kicker">
+          <span className="hero-eyebrow kicker">
             Evergreen Academy &middot; Certification Level 4 of 6
           </span>
           <h1>Advanced Certification</h1>
