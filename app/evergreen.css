@@ -2844,6 +2844,7 @@ button.dot {
 
 .visual-bajaj { background: linear-gradient(135deg, var(--dark-green) 0%, #004b29 100%); }
 .visual-tvs { background: linear-gradient(135deg, var(--medium-green) 0%, var(--bg-dark-green) 100%); }
+.visual-elecer { background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%); }
 .visual-parts { background: linear-gradient(135deg, var(--navy-blue) 0%, #101a30 100%); }
 
 .visual-tag {

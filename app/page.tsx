@@ -242,7 +242,7 @@ export default function Home() {
             </div>
             <div className="grid-2 reveal-stagger">
               <div className="row">
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <div className="product-card">
                     <div className="product-visual visual-bajaj">
                       <img src="/assets/red.webp" alt="Bajaj Pragia tricycle — cargo and passenger"  loading="lazy" decoding="async" />
@@ -276,7 +276,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
                   <div className="product-card">
                     <div className="product-visual visual-tvs">
                       <img src="/assets/bbbb.webp" alt="TVS King Deluxe three-wheeler"  loading="lazy" decoding="async" />
@@ -310,7 +310,41 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-3">
+                  <div className="product-card">
+                    <div className="product-visual visual-elecer">
+                      <img src="/assets/elecer-tricycle.jpg" alt="ELECER Electric Tricycle Carriage"  loading="lazy" decoding="async" />
+                      <span className="visual-tag">Electric</span>
+                    </div>
+                    <div className="product-body">
+                      <span className="eyebrow">ELECER</span>
+                      <h3 className="product-title">ELECER Electric Carriage</h3>
+                      <p>
+                        A zero-emission electric tricycle built for modern
+                        transport &mdash; perfect for commercial deliveries and
+                        family outings. Spacious seating, a built-in monitor
+                        screen, and precision handbrake controls, all wrapped in
+                        an eco-friendly ride.
+                      </p>
+                      <div className="mini-specs">
+                        <div className="mini-spec"><strong>2000 W</strong><span>Motor Power</span></div>
+                        <div className="mini-spec"><strong>50 km/h</strong><span>Max Speed</span></div>
+                        <div className="mini-spec"><strong>80 km</strong><span>Range</span></div>
+                        <div className="mini-spec"><strong>Lithium</strong><span>Battery Type</span></div>
+                      </div>
+                      <ul className="spec-chips">
+                        <li>Passenger &amp; Cargo</li>
+                        <li>Monitor Screen</li>
+                        <li>Built-in Radio</li>
+                        <li>Handbrake System</li>
+                        <li>220V Charger</li>
+                        <li>Yellow &amp; White Finish</li>
+                      </ul>
+                      <a href="/contact" className="text-link has-arrow">Enquire about the Elecer Carriage</a>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-3">
                   <div className="product-card">
                     <div className="product-visual visual-parts">
                       <img src="/assets/nnnn.avif" alt="Genuine engine spare parts for Bajaj and TVS tricycles"  loading="lazy" decoding="async" />
