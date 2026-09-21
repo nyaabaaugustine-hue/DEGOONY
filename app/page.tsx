@@ -272,7 +272,7 @@ export default function Home() {
                         <li>CNG / LPG / Diesel Variants</li>
                         <li>Eco Green Colour Option</li>
                       </ul>
-                      <a href="/contact" className="text-link has-arrow">Enquire about the Bajaj Pragia</a>
+                      <a href="/products/bajaj-pragia" className="text-link has-arrow">View Full Specs &amp; Details</a>
                     </div>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ export default function Home() {
                         <li>Chassis-Mounted Bumper</li>
                         <li>Twin Headlamps</li>
                       </ul>
-                      <a href="/contact" className="text-link has-arrow">Enquire about the TVS Pragia</a>
+                      <a href="/products/tvs-pragia" className="text-link has-arrow">View Full Specs &amp; Details</a>
                     </div>
                   </div>
                 </div>
@@ -340,7 +340,7 @@ export default function Home() {
                         <li>220V Charger</li>
                         <li>Yellow &amp; White Finish</li>
                       </ul>
-                      <a href="/contact" className="text-link has-arrow">Enquire about the Elecer Carriage</a>
+                      <a href="/products/elecer-carriage" className="text-link has-arrow">View Full Specs &amp; Details</a>
                     </div>
                   </div>
                 </div>
@@ -388,7 +388,7 @@ export default function Home() {
                         TVS parts carry QR-code verification &middot; Bajaj supplied via
                         700+ dealers &amp; 3,000 service centres.
                       </p>
-                      <a href="/contact" className="text-link has-arrow">Request parts availability</a>
+                      <a href="/products/spare-parts-listing" className="text-link has-arrow">View All Parts &amp; Details</a>
                     </div>
                   </div>
                 </div>
