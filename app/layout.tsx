@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import "./globals.css";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
@@ -68,6 +69,10 @@ export default function RootLayout({
         </LeaderModalProvider>
         <ScrollRevealEngine />
         <ScrollToTop />
+        <Script
+          src="https://pragya-ai.nyaaba-augustine.workers.dev/widget.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
