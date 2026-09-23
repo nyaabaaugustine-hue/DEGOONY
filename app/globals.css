@@ -101,13 +101,6 @@
 }
 
 @media (max-width: 767px) {
-  /* The rail duplicates the footer's social links and is not a conversion
-     path; hiding it stops six more buttons competing for a phone's bottom
-     edge. */
-  #socialRail {
-    display: none;
-  }
-
   .mobile-cta-bar {
     position: fixed;
     left: 0;
@@ -134,7 +127,17 @@
 
   .mobile-cta-spacer {
     display: block;
-    height: 74px;
+    height: 96px;
+  }
+
+  #socialRail {
+    bottom: calc(100px + env(safe-area-inset-bottom, 0px)) !important;
+    left: 14px !important;
+  }
+
+  #backToTop {
+    bottom: calc(164px + env(safe-area-inset-bottom, 0px)) !important;
+    right: 16px !important;
   }
 }
 

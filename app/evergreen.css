@@ -5860,7 +5860,7 @@ html[data-theme="dark"] .theme-float .icon-moon {
         width: 50px;
         height: 50px;
         right: 14px;
-        bottom: 14px;
+        bottom: calc(84px + env(safe-area-inset-bottom, 0px));
     }
 
     .whatsapp-float svg {
@@ -5870,7 +5870,12 @@ html[data-theme="dark"] .theme-float .icon-moon {
 
     .theme-float {
         left: 14px;
-        bottom: 14px;
+        bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+    }
+
+    #socialRail {
+        bottom: calc(160px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 14px !important;
     }
 }
 
@@ -5887,12 +5892,12 @@ div[style*="z-index: 2147483001"][style*="position:fixed"] {
 
 @media (max-width: 767px) {
     #degoony-widget {
-        bottom: 76px !important;
+        bottom: calc(140px + env(safe-area-inset-bottom, 0px)) !important;
         right: 14px !important;
     }
 
     div[style*="z-index: 2147483001"][style*="position:fixed"] {
-        bottom: 138px !important;
+        bottom: calc(212px + env(safe-area-inset-bottom, 0px)) !important;
         right: 14px !important;
     }
 }
@@ -6503,7 +6508,78 @@ html[data-theme="dark"] ::selection {
 #backToTop:hover { background: var(--bg-medium-green); }
 
 @media (max-width: 560px) {
-    #backToTop { right: 16px; bottom: 88px; }
+    #backToTop { 
+        right: 16px; 
+        bottom: calc(168px + env(safe-area-inset-bottom, 0px)); 
+    }
+}
+
+/* ===== MOBILE FLOATING BUTTONS - ENSURE VISIBILITY ===== */
+@media (max-width: 480px) {
+    .whatsapp-float {
+        bottom: calc(90px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 12px !important;
+        width: 48px !important;
+        height: 48px !important;
+    }
+
+    .theme-float {
+        bottom: calc(90px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 12px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    #degoony-widget {
+        bottom: calc(148px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 12px !important;
+    }
+
+    div[style*="z-index: 2147483001"][style*="position:fixed"] {
+        bottom: calc(220px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 12px !important;
+    }
+
+    #socialRail {
+        bottom: calc(108px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 12px !important;
+    }
+
+    .social-rail-btn {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 14px !important;
+    }
+
+    .social-rail-cta {
+        height: 34px !important;
+        padding: 0 12px !important;
+        font-size: 11px !important;
+    }
+
+    #backToTop {
+        bottom: calc(172px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 12px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .whatsapp-float,
+    .theme-float {
+        width: 44px !important;
+        height: 44px !important;
+    }
+
+    #degoony-widget button[aria-label="Chat with DEGOONY"] {
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    #socialRail {
+        bottom: calc(104px + env(safe-area-inset-bottom, 0px)) !important;
+    }
 }
 
 /* ===== PROMO LEAD MODAL ===== */
@@ -6922,7 +6998,11 @@ body.promo-open { overflow: hidden; }
 }
 
 @media (max-width: 560px) {
-    #socialRail { left: 14px; bottom: 74px; gap: 8px; }
+    #socialRail { 
+        left: 14px; 
+        bottom: calc(156px + env(safe-area-inset-bottom, 0px)); 
+        gap: 8px; 
+    }
     .social-rail-btn { width: 36px; height: 36px; font-size: 15px; }
 }
 /* =====================================================================
