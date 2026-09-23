@@ -5874,6 +5874,29 @@ html[data-theme="dark"] .theme-float .icon-moon {
     }
 }
 
+/* ===== DEGOONY AI WIDGET POSITIONING ===== */
+#degoony-widget {
+    bottom: 92px !important;
+    right: 20px !important;
+}
+
+div[style*="z-index: 2147483001"][style*="position:fixed"] {
+    bottom: 164px !important;
+    right: 20px !important;
+}
+
+@media (max-width: 767px) {
+    #degoony-widget {
+        bottom: 76px !important;
+        right: 14px !important;
+    }
+
+    div[style*="z-index: 2147483001"][style*="position:fixed"] {
+        bottom: 138px !important;
+        right: 14px !important;
+    }
+}
+
 /* ===== DARK MODE ===== */
 html[data-theme="dark"] {
     --bg-white: #0e1712;
