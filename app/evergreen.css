@@ -5897,6 +5897,18 @@ div[style*="z-index: 2147483001"][style*="position:fixed"] {
     }
 }
 
+/* ===== DEGOONY AI WIDGET CUSTOM ICON ===== */
+#degoony-widget button[aria-label="Chat with DEGOONY"] {
+    background-image: url("https://res.cloudinary.com/dwsl2ktt2/image/upload/v1790161370/cyber_ijfhlq.png") !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+#degoony-widget button[aria-label="Chat with DEGOONY"] svg {
+    display: none !important;
+}
+
 /* ===== DARK MODE ===== */
 html[data-theme="dark"] {
     --bg-white: #0e1712;
